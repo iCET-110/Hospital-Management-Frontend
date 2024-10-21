@@ -21,14 +21,30 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link link-light">
+                <a href="#items-submenu-pat" class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
+                   data-bs-toggle="collapse" aria-expanded="false" id="nav-patients">
                     <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#speedometer2" />
+                        <use xlink:href="#table" />
                     </svg>
-                    <i class="bi bi-people-fill me-2"></i> Patients
+                    <i class="bi bi-people-fill me-2"></i>Patients
                     <hr class="dropdown-divider">
                 </a>
+                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-pat">
+                    <li class="nav-item" id="liViewPatient">
+                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>View patient</a>
+                    </li>
+                    <li class="nav-item" id="liAddPatient">
+                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>Add patient</a>
+                    </li>
+                    <li class="nav-item" id="liUpdatePatient">
+                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>Update patient</a>
+                    </li>
+                    <li class="nav-item" id="liDeletePatient">
+                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>Delete patient</a>
+                    </li>
+                </ul>
             </li>
+            
             <li>
                 <a href="#items-submenu-apo" class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
                     data-bs-toggle="collapse" aria-expanded="false" id="nav-appointments">
@@ -38,7 +54,7 @@
                     <i class="bi bi-file-earmark-post me-2"></i>Appointments
                     <hr class="dropdown-divider">
                 </a>
-                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small " id="items-submenu-apo">
+                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-apo">
                     <li class="nav-item" id="liViewAppointment">
                         <a href="#" class="nav-link link-dark"><span class="separator">|</span>View appointments</a>
                     </li>
@@ -60,6 +76,16 @@
                         <use xlink:href="#grid" />
                     </svg>
                     <i class="bi bi-person-workspace me-2"></i>Doctors
+                    <hr class="dropdown-divider">
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link link-light">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#grid" />
+                    </svg>
+                    <i class="bi bi-file-earmark-ppt-fill me-2"></i>Prescription
                     <hr class="dropdown-divider">
                 </a>
             </li>
