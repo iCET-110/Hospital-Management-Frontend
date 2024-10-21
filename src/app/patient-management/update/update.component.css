@@ -1,7 +1,7 @@
 .container {
     display: flex;
     height: 100vh;
-    background-color: #f0f8f0;
+    background-color: #E6FFE8;
   }
   
   .sidebar {
@@ -30,19 +30,26 @@
     width: 70%;
     padding: 10px;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
+    background-color: #80CD84;
+  }
+  .option {
+    width: 40%;
+    
+   
+    
   }
   
   .save-btn {
     padding: 10px 20px;
-    background-color: #2b6e3b;
+    background-color: #236429;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
   }
   
   .personal-info, .medical-info {
-    background-color: #c6e7c6;
+    background-color: #80CD84;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -68,5 +75,6 @@
   
   label {
     margin-right: 10px;
+    
   }
   
