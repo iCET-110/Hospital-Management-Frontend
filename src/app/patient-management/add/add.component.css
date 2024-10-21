@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f3d6, #93c96b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.form-container {
+    background-color: #c1e3a9;
+    border-radius: 50px;
+    padding: 20px;
+    max-width: 10000px;
+    width: 1000px;
+}
+
+h1 {
+    text-align: left;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    background-color: #a0ce80;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: lowercase;
+    color: #fff;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #e6f2d8;
+}
+
+.input-group.gender {
+    display: flex;
+    align-items: center;
+}
+
+.input-group.gender label {
+    margin: 0 10px;
+}
+
+button {
+    background-color: #56b347;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f9133;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .section {
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .input-group.gender label {
+        margin: 0 5px;
+    }
+}
