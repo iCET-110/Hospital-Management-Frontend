@@ -1,0 +1,29 @@
+body {
+    background-color: #80CD84;
+}
+
+.container {
+    background-color: #CAF4CC;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+h1 {
+    color: #0c5e07;
+    font-size: 32px;
+    font-family:' San Francisco';
+
+}
+
+.table th {
+    background-color: #38823E;
+    font-family:' San Francisco';
+    font-size: 18px;
+    color:  #eeeee6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #eeeee6;
+}
+
