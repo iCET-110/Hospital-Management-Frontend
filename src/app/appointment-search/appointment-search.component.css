@@ -15,9 +15,9 @@
     color: #3d3b3b;
     padding: 0.7rem 1rem;
     border-radius: 30px;
-    width: 40%;
+    width: 100%;
     /* transition: all ease-in-out .5s; */
-    margin-right: -2rem;
+    /* margin-right: -2rem; */
   }
   
   .search__input:hover, .search__input:focus {
@@ -52,4 +52,8 @@
     height: 1.3em;
     width: 1.3em;
     fill: #E6FFE8;
+  } */
+
+  /* .nav{
+background-color: black;
   } */
