@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-appointment-handling',
+  selector: 'app-appoiment-search',
   standalone: true,
   imports: [],
   templateUrl: './appointment-handling.component.html',
