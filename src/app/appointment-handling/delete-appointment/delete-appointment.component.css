@@ -1,9 +1,13 @@
+.side-bar{
+  max-width: 10%;
+}
+
 .bg-light-green {
   background-color: #E6FFE8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
 }
 
 .container-fluid {
