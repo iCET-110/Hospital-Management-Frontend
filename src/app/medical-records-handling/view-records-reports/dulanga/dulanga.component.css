@@ -153,4 +153,73 @@ button {
     background-color: #003400;
 }
 
+/* Responsive Page */
 
+@media (max-width: 1200px) {
+    .filter-box, .records-box {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .apply-filters, .clear-filter {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #record-id, #date {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        margin-right: 0;
+    }
+
+    .filter-box, .records-box {
+        width: 95%;
+    }
+
+    .apply-filters, .clear-filter {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .record {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .filter-box, .records-box {
+        width: 100%;
+    }
+
+    .apply-filters, .clear-filter {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .record {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+    
