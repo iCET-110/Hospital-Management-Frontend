@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DashbordComponent } from './dashbord/dashbord.component';
+import { DashbordComponent } from './main-dashboard/dashbord/dashbord.component';
 
 @Component({
   selector: 'app-medical-records-handling',
