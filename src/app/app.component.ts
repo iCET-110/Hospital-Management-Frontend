@@ -10,7 +10,7 @@ import { MainDashboardComponent } from './medical-records-handling/main-dashboar
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
+  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent,MainDashboardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
