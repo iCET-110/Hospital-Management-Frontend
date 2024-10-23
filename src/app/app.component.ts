@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DilshaniComponent } from './medical-records-handling/add-records/dilshani/dilshani.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,DilshaniComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
