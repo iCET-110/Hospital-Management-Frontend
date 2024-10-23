@@ -1,0 +1,70 @@
+<div class="col-md-10 bg-light-green d-flex flex-column min-vh-100">
+  <div class="d-flex justify-content-between p-4 align-items-center" id="top-bar">
+    <h1 id="head-text">Delete Appointments</h1>
+    <div class="d-flex align-items-center" id="admin-info">
+      <div class="me-3" id="date">
+        <strong>Date</strong>
+        <div>10/18/2024</div>
+      </div>
+      <div class="d-flex align-items-center" id="admin-content">
+        <img src="profile.jpg" alt="Admin" id="image" class="rounded-circle" style="width: 40px; height: 40px;">
+        <div class="ms-2" id="admin-name">
+          <strong>Nisila Perera</strong>
+          <div>Admin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" container-fluid flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="form-container row justify-content-center w-100">
+      <div class="col-lg-8 col-md-10 col-12 bg-white p-4 p-md-5 rounded" id="form">
+        <div class="input-group">
+          <div class="input-group-prepend">
+          </div>
+          <input type="search" class="form-control" placeholder="Search" id="search">
+        </div>
+        <hr>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Enter Name">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="NIC">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Mobile Number">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+          <div class="col-md-6">
+            <div class="btn-group" role="group" aria-label="Gender selection">
+              <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off">
+              <label class="btn btn-outline-success" for="male">Male</label>
+
+              <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off" checked>
+              <label class="btn btn-outline-success" for="female">Female</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <input type="date" class="form-control">
+              <input type="time" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <textarea class="form-control" placeholder="Description"></textarea>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select">
+              <option selected>Select Category</option>
+            </select>
+          </div>
+          <div class="col-12 text-end mt-4">
+            <button class="btn btn-success btn-lg w-100 delete-button">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
