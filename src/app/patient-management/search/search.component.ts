@@ -40,7 +40,7 @@ export class SearchComponent {
     currentlyAdmitted: true,
     medicalInfo: {
       bloodType: 'O+',
-      allergies: ['pineapple', 'pretty girls'],
+      allergies: ['pineapple'],
       remarks: 'left wrist fracture, undergone leg surgery in 2020 & a broken heart.'
     }
   };

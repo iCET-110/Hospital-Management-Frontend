@@ -1,11 +1,12 @@
+
 /* Container styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    border-color: #E6FFE8;
+    background-color: #E6FFE8;
   }
-  
+
   /* Search section styles */
   .search-container {
     margin-bottom: 24px;
@@ -22,8 +23,9 @@
     flex: 1;
     padding: 12px 16px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 100px;
     font-size: 16px;
+    background-color: #80CD84;
   }
   
   .search-button {
@@ -31,7 +33,7 @@
     background-color: #236429;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 100px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
