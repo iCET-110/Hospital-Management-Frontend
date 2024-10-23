@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PawaraComponent } from "./medical-records-handling/add-records/pawara/pawara.component";
 
 @Component({
   selector: 'app-root',

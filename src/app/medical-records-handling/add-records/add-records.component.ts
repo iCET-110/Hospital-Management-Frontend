@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { PawaraComponent } from './pawara/pawara.component';
 
 @Component({
   selector: 'app-add-records',
   standalone: true,
-  imports: [],
+  imports: [PawaraComponent],
   templateUrl: './add-records.component.html',
   styleUrl: './add-records.component.css'
 })
