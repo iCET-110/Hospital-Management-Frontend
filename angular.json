@@ -27,10 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "bootstrap/dist/css/bootstrap.min.css"
-            ],
-            "scripts": ["bootstrap/dist/js/bootstrap.min.js"],
+                 "src/styles.css"
+            ],           "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
