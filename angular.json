@@ -27,7 +27,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "bootstrap/dist/css/bootstrap.min.css",
+              "bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"],
             "server": "src/main.server.ts",
