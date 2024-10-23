@@ -1,8 +1,6 @@
 body {
-    background: linear-gradient(to bottom, #ffffff, #80CD84);
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #80CD84)
 }
 
 .container {
@@ -10,23 +8,49 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
 h1 {
     color: #0c5e07;
     font-size: 32px;
-    font-family:'sans-serif';
-
+    font-family: 'sans-serif';
+    margin-bottom: 20px; 
+    text-align: center; 
 }
 
 .table th {
     background-color: #38823E;
-    font-family:'sans-serif';
+    font-family: 'sans-serif';
     font-size: 18px;
-    color:  #eeeee6;
+    color: #eeeee6;
+    text-align: center; 
+    vertical-align: middle; 
 }
 
 .table-hover tbody tr:hover {
     background-color: #eeeee6;
 }
 
+.table td {
+    font-family: 'sans-serif';
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px; 
+    font-size: 16px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+#navbar {
+    width: 100%;
+    background-color: #38823E;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

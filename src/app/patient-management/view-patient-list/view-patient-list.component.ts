@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavBarComponent } from '../../common/nav-bar/nav-bar.component'
+import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';  // Ensure the path is correct
 
 interface Patient {
   name: string;
@@ -16,12 +16,12 @@ interface Patient {
 @Component({
   selector: 'app-view-patient-list',
   standalone: true,
-  imports: [ CommonModule , NavBarComponent], 
+  imports: [ CommonModule , NavBarComponent ],  // Make sure NavBarComponent is imported
   templateUrl: './view-patient-list.component.html',
   styleUrls: ['./view-patient-list.component.css']
 })
 export class ViewPatientListComponent {
-  patients: Patient[] = [
+  public patients: Patient[] = [
     {
       name: "John Doe",
       nic: "123456789V",
@@ -31,7 +31,17 @@ export class ViewPatientListComponent {
       address: "123 Main St, Colombo",
       guardian: "Jane Doe",
       guardianContact: "+94 777654321"
+    },
+    {
+      name: "Alice Smith",
+      nic: "987654321V",
+      dob: "1985-02-25",
+      gender: "Female",
+      contact: "+94 777123456",
+      address: "456 Elm St, Kandy",
+      guardian: "Robert Smith",
+      guardianContact: "+94 776543210"
     }
-    // Other patient records...
+    // Add more sample patient records here...
   ];
 }

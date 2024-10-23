@@ -2,35 +2,35 @@
   <app-nav-bar></app-nav-bar>
 </div>
     
-    <!-- Patient Details in table -->
-    <div class="container mt-5">
-        <h1 class="mb-4">Patient List</h1>
-        <div class="table-responsive">
-          <table id="patientTable" class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>NIC</th>
-                <th>DOB</th>
-                <th>Gender</th>
-                <th>Contact</th>
-                <th>Resident Address</th>
-                <th>Guardian</th>
-                <th>Guardian Contact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let patient of patients">
-                <td>{{patient.name}}</td>
-                <td>{{patient.nic}}</td>
-                <td>{{patient.dob}}</td>
-                <td>{{patient.gender}}</td>
-                <td>{{patient.contact}}</td>
-                <td>{{patient.address}}</td>
-                <td>{{patient.guardian}}</td>
-                <td>{{patient.guardianContact}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>      
+<!-- Patient Details in table -->
+<div class="container mt-5">
+    <h1 class="mb-4">Patient List</h1>
+    <div class="table-responsive">
+      <table id="patientTable" class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>NIC</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Resident Address</th>
+            <th>Guardian</th>
+            <th>Guardian Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{patient.name}}</td>
+            <td>{{patient.nic}}</td>
+            <td>{{patient.dob}}</td>
+            <td>{{patient.gender}}</td>
+            <td>{{patient.contact}}</td>
+            <td>{{patient.address}}</td>
+            <td>{{patient.guardian}}</td>
+            <td>{{patient.guardianContact}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>      
