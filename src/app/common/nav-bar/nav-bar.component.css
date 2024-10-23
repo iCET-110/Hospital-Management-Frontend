@@ -97,10 +97,16 @@
     font-weight: bold; 
 }
 .logo-box {
-    background-color: white; 
-    color: #38823E; 
-    width: 100%;
+    background: linear-gradient(360deg, #80CD84,#BFE6C1, #E6FFE8);
+    color: #38823E;
+    font-size: xx-large; 
+    width: 120%;
+    height: 15%;
     text-align: center; 
     padding: 1rem; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.248); 
+    border-radius: 5vw 0 0 5vw ;
+}
+#sidebar{
+    border-radius: 0 0 10% 0;
 }

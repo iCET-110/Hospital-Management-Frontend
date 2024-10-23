@@ -31,7 +31,7 @@
               "bootstrap/dist/css/bootstrap.min.css",
               "bootstrap-icons/font/bootstrap-icons.css"
             ],
-            "scripts": ["bootstrap/dist/js/bootstrap.js"],
+            "scripts": ["bootstrap/dist/js/bootstrap.min.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -92,7 +92,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
