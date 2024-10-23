@@ -5,7 +5,7 @@ import { DilshaniComponent } from './medical-records-handling/add-records/dilsha
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,DilshaniComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
