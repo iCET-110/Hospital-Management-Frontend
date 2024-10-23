@@ -1,13 +1,13 @@
 <div class="modal" id="myModal">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 570px;">
+        <div class="modal-content" style="width: 550px;">
 
             <div class="modal-header">
                 <h4 class="modal-title text-success">Hold Patients</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
-            <div class="modal-body" style="overflow-y: auto; height:300px; width: 570px;">
+            <div class="modal-body" style="overflow-y: auto; height:400px; width: 550px;">
                 <table class="table table-success table-striped-columns ">
                     <thead>
                         <tr class="text-center ">
@@ -18,75 +18,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="text-center">
-                            <td>P001</td>
-                            <td>Kamala</td>
-                            <td>A001</td>
-                            <td>
-                                <div class="d-flex-centered">
-                                    <button type="button" class="btn btn-success  me-2"
-                                        data-bs-dismiss="modal">Resume</button>
-                                    <button type="button" class="btn btn-success me-2 "><i
-                                            class="bi bi-trash3-fill"></i></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>P002</td>
-                            <td>Nimal</td>
-                            <td>A002</td>
-                            <td>
-                                <div class="d-flex-centered">
-                                    <button type="button" class="btn btn-success  me-2"
-                                        data-bs-dismiss="modal">Resume</button>
-                                    <button type="button" class="btn btn-success me-2 "><i
-                                            class="bi bi-trash3-fill"></i></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>P003</td>
-                            <td>Saman</td>
-                            <td>A003</td>
-                            <td>
-                                <div class="d-flex-centered">
-                                    <button type="button" class="btn btn-success  me-2"
-                                        data-bs-dismiss="modal">Resume</button>
-                                    <button type="button" class="btn btn-success me-2 "><i
-                                            class="bi bi-trash3-fill"></i></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>P004</td>
-                            <td>Ann</td>
-                            <td>A004</td>
-                            <td>
-                                <div class="d-flex-centered">
-                                    <button type="button" class="btn btn-success  me-2"
-                                        data-bs-dismiss="modal">Resume</button>
-                                    <button type="button" class="btn btn-success me-2 "><i
-                                            class="bi bi-trash3-fill"></i></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>P005</td>
-                            <td>Suraj</td>
-                            <td>A005</td>
-                            <td>
-                                <div class="d-flex-centered">
-                                    <button type="button" class="btn btn-success  me-2"
-                                        data-bs-dismiss="modal">Resume</button>
-                                    <button type="button" class="btn btn-success me-2 "><i
-                                            class="bi bi-trash3-fill"></i></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>P006</td>
-                            <td>Andrew</td>
-                            <td>A006</td>
+                        <tr class="text-center" *ngFor="let patient of HoldPatient">
+                            <td>{{patient.patientID}}</td>
+                            <td>{{patient.patientName}}</td>
+                            <td>{{patient.appoinmentID}}</td>
                             <td>
                                 <div class="d-flex-centered">
                                     <button type="button" class="btn btn-success  me-2"
