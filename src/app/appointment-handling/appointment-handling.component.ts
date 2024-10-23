@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { DeleteAppointmentComponent } from "./delete-appointment/delete-appointment.component";
 
 @Component({
   selector: 'app-appointment-handling',
   standalone: true,
-  imports: [],
+  imports: [DeleteAppointmentComponent, DeleteAppointmentComponent],
   templateUrl: './appointment-handling.component.html',
   styleUrl: './appointment-handling.component.css'
 })
