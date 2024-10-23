@@ -1,11 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ConfirmationPopupComponent } from './confirmation-popup/confirmation-popup.component';
 
 @Component({
   selector: 'app-prescription-data-entry',
   standalone: true,
-  imports: [FormsModule, NgFor],
+  imports: [ConfirmationPopupComponent],
   templateUrl: './prescription-data-entry.component.html',
   styleUrls: ['./prescription-data-entry.component.css']
 })

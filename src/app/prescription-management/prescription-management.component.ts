@@ -4,7 +4,7 @@ import { PrescriptionDataEntryComponent } from './component/prescription-data-en
 @Component({
   selector: 'app-prescription-management',
   standalone: true,
-  imports: [PrescriptionDataEntryComponent],
+  imports: [PrescriptionDataEntryComponent ],
   templateUrl: './prescription-management.component.html',
   styleUrl: './prescription-management.component.css'
 })
