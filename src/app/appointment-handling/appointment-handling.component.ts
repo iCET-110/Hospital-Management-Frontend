@@ -4,7 +4,7 @@ import { DeleteAppointmentComponent } from "./delete-appointment/delete-appointm
 @Component({
   selector: 'app-appointment-handling',
   standalone: true,
-  imports: [DeleteAppointmentComponent, DeleteAppointmentComponent],
+  imports: [DeleteAppointmentComponent],
   templateUrl: './appointment-handling.component.html',
   styleUrl: './appointment-handling.component.css'
 })
