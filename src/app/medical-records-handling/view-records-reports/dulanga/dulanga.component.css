@@ -2,151 +2,149 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #CAF4CC;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E6FFE8;
+    padding: 20px;
 }
 
 .container {
-    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-header h1 {
-    font-size: 2rem;
-}
-
-/* Content Section */
-.content {
-    display: flex;
-    margin: 30px;
-}
-
-.filters {
-    background-color: #f7f9f7;
     padding: 20px;
-    border-radius: 20px;
-    width: 30%;
-    margin-right: 20px;
-    height: 500px;
-    margin-top: 100px;
 }
 
-.apply-filters{
-    margin-left: 80px;
-}
-
-.filters h3 {
+h3 {
+    text-align: center;
     margin-bottom: 20px;
+    margin-right: 450px;
 }
 
+/* Filter Box Styling */
 .filter-box {
+    background-color: #aecdb0;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    background-color: #f5f6f5;
+    margin-left: 400px;
+    width: 900px;
+
 }
 
-#record-id{
-    margin-top: 30px;
-}
-
-.filter-box input {
+.filter-box input, .filter-box label {
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.filter-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
-}
-
-.filter-actions .apply {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.filter-actions .clear {
-    background-color: #f44336;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Records Section */
-.records {
-    background-color: #ecf9f1;
-    padding: 20px;
-    border-radius: 8px;
-    width: 70%;
-    margin-top: 100px;
-}
-
-.record-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.record-header input {
-    width: 48%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.record-list .record {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
     margin-bottom: 10px;
-    background-color: #CAF4CC;
-}
+    border: 1px solid #ccc;
+    border-radius: 50px;
+} 
 
-.record span {
-    flex: 1;
-}
-
-#record-id{
-    border-radius: 30px;
-    background-color: #8BC88F;
-    font-style: bold;
-}
-
-.record button {
-    margin-left: 10px;
-    padding: 8px 12px;
+.apply-filters {
+    background-color: #1f7d1f;
+    color: #fff;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    width: 80px;
+    width: 450px;
+    height: 50px;
+    margin-left: 50px;
 }
 
-.view-btn {
-    background-color: #38823E;
-    color: white;
-    border-radius: 10px;
+.clear-filter{
+    background-color: #ad3030;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
 }
 
-.update-btn {
-    background-color: #D3EE98;
-    color: black;
+.clear-filter:hover{
+    background-color: #700000;
     
 }
 
-.delete-btn {
-    background-color: #f44336;
+.apply-filters:hover{
+    background-color:#003400 ;
+}
+
+#record-id{
+    width: 700px;
+    margin-left: 20px;
+}
+
+#date{
+    width: 700px;
+    margin-left: 20px;
+}
+/* Records Box Styling */
+.records-box {
+    background-color: #aecdb0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 400px;
+    width: 900px;
+}
+
+.record {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.record span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 90px;
+
+}
+
+.view-btn {
+    background-color: #258925;
     color: white;
 }
+
+.update-btn {
+    background-color: #628564;
+    color: rgb(255, 255, 255);
+}
+
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+}
+
+.delete-btn:hover{
+    background-color: #700000;
+}
+
+.view-btn:hover{
+    background-color: #003400;
+}
+
+.update-btn:hover{
+    background-color: #003400;
+}
+
+
