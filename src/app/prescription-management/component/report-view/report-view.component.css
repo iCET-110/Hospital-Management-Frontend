@@ -1,0 +1,63 @@
+.frame {
+    height: 800px;
+    width: 350px;
+    border: 2px solid #054d09;
+    padding: 10px;
+    margin-top: 2px;
+    border-radius: 8px;
+    background-color: #fefefe;
+    box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow {
+    margin-bottom: 20px;
+    background-color: #f0f8f0;
+    border-radius: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.1);
+    color: #4cc882;
+    transition: background-color 0.3s ease;
+}
+
+.card-shadow:hover {
+    background-color: #ffffff;
+}
+
+.scrollable-container {
+    cursor: pointer;
+    text-align: left;
+    height: 640px;
+    width: 330px;
+    overflow-y: scroll;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #4cc882;
+}
+
+.bi-funnel-fill {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stop-circle-fill {
+    cursor: pointer;
+    margin-left: auto;
+    color: #4CAF50;
+}
