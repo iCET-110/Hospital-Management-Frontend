@@ -1,77 +1,128 @@
 <body>
-    <div class="form-container">
-        <h1>Add patient</h1>
-        <form id="add-patient-form">
-            <div class="section">
-                <h2>personal info</h2>
-                <div class="input-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" placeholder="First name" required>
-                </div>
-                <div class="input-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" placeholder="Last name" required>
-                </div>
-                <div class="input-group gender">
-                    <label>Gender</label>
-                    <input type="radio" name="gender" id="male" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" name="gender" id="female" value="female">
-                    <label for="female">Female</label>
-                </div>
-                <div class="input-group">
-                    <label for="nic">NIC</label>
-                    <input type="text" id="nic" placeholder="NIC" required>
-                </div>
-                <div class="input-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" id="dob" required>
-                </div>
-                <div class="input-group">
-                    <label for="phone">Phone</label>
-                    <input type="text" id="phone" placeholder="07x xxx xxxx" required>
-                </div>
-                <div class="input-group">
-                    <label for="address">Resident Address</label>
-                    <input type="text" id="address" placeholder="Resident address" required>
-                </div>
-                <div class="input-group">
-                    <label for="guardian">Guardian</label>
-                    <input type="text" id="guardian" placeholder="Guardian">
-                </div>
-                <div class="input-group">
-                    <label for="guardian-contact">Guardian Contact</label>
-                    <input type="text" id="guardian-contact" placeholder="Guardian contact">
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>medical info & history</h2>
-                <div class="input-group">
-                    <label for="blood-type">Blood Type</label>
-                    <select id="blood-type" required>
-                        <option value="">Select Blood Type</option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="allergies">Allergies</label>
-                    <input type="text" id="allergies" placeholder="Allergies">
-                </div>
-                <div class="input-group">
-                    <label for="remarks">Remarks</label>
-                    <textarea id="remarks" placeholder="Remarks"></textarea>
-                </div>
-            </div>
-
-            <button type="submit">Add</button>
-        </form>
+<div class="container">
+    <div class="header">
+      <h1>Add Patient</h1>
+      <button class="add-btn" (click)="onSubmit()">Add</button>
     </div>
+  
+    <form [formGroup]="patientForm">
+      <!-- sachin sp Personal Info Section -->
+      <div class="form-section">
+        <h2>Personal Info</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="firstName"
+              placeholder="First name"
+              [class.error]="patientForm.get('firstName')?.touched && patientForm.get('firstName')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="lastName"
+              placeholder="Last name"
+              [class.error]="patientForm.get('lastName')?.touched && patientForm.get('lastName')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group gender-group">
+            <label>
+              <input type="radio" formControlName="gender" value="male">
+              male
+            </label>
+            <label>
+              <input type="radio" formControlName="gender" value="female">
+              female
+            </label>
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="nic"
+              placeholder="NIC"
+              [class.error]="patientForm.get('nic')?.touched && patientForm.get('nic')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="date" 
+              formControlName="dateOfBirth"
+              [class.error]="patientForm.get('dateOfBirth')?.touched && patientForm.get('dateOfBirth')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="tel" 
+              formControlName="contact"
+              placeholder="07X XXX XXXX"
+              [class.error]="patientForm.get('contact')?.touched && patientForm.get('contact')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group full-width">
+            <textarea 
+              formControlName="residentAddress"
+              placeholder="Resident address"
+              [class.error]="patientForm.get('residentAddress')?.touched && patientForm.get('residentAddress')?.invalid"
+            ></textarea>
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="guardian"
+              placeholder="Guardian"
+              [class.error]="patientForm.get('guardian')?.touched && patientForm.get('guardian')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="tel" 
+              formControlName="guardianContact"
+              placeholder="Guardian contact"
+              [class.error]="patientForm.get('guardianContact')?.touched && patientForm.get('guardianContact')?.invalid"
+            >
+          </div>
+        </div>
+      </div>
+  
+      <!-- sachin sp Medical Info Section -->
+      <div class="form-section medical-section">
+        <h2>Medical Info & History</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <select 
+              formControlName="bloodType"
+              [class.error]="patientForm.get('bloodType')?.touched && patientForm.get('bloodType')?.invalid"
+            >
+              <option value="">Select blood type</option>
+              <option *ngFor="let type of bloodTypes" [value]="type">{{type}}</option>
+            </select>
+          </div>
+  
+          <div class="form-group full-width">
+            <input 
+              type="text" 
+              formControlName="allergies"
+              placeholder="Allergies"
+            >
+          </div>
+  
+          <div class="form-group full-width">
+            <textarea 
+              formControlName="remarks"
+              placeholder="Remarks"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </body>

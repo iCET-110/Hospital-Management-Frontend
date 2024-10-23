@@ -1,149 +1,162 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e0f3d6, #93c96b);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #17b831); 
+
 }
 
-.form-container {
-    background-color: #c1e3a9;
-    border-radius: 50px;
-    padding: 20px;
-    max-width: 10000px;
-    width: 1000px;
+.container {
+  max-width: 1200px;
+  margin-left: auto;  
+  margin-right: 200px;    
+  padding: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
 h1 {
-    text-align: left;
-    color: #333;
-    margin-bottom: 20px;
+    margin: 0;
+    color: #000000;
+    font-size: 40px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.add-btn {
+    background-color: #80CD84;
+    color: rgb(243, 236, 236);
+    border: none;
+    border-radius: 50px;
+    padding: 20px 70px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: background-color 1.8s;
 }
 
-.section {
-    background-color: #a0ce80;
-    padding: 15px;
-    border-radius: 10px;
+.add-btn:hover {
+    background-color: #003400;
+}
+
+.form-section {
+    background: #15c71e49;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 2 2px 50px rgb(134, 42, 42);
+}
+
+.medical-section {
+    background-color: #15c71e49;
 }
 
 h2 {
-    margin-bottom: 10px;
-    font-size: 16px;
-    text-transform: lowercase;
-    color: #fff;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+    font-size: 25px;
 }
 
-.input-group {
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
 }
 
-.input-group label {
-    margin-bottom: 5px;
-    color: #fff;
+.form-group.full-width {
+    grid-column: 1 / -1;
 }
 
-.input-group input, 
-.input-group select, 
-.input-group textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #e6f2d8;
-}
-
-.input-group.gender {
+.gender-group {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
     align-items: center;
 }
 
-.input-group.gender label {
-    margin: 0 10px;
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #E6FFE8;
+    border-radius: 25px;
 }
 
-button {
-    background-color: #56b347;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
+textarea {
+    height: 80px;
+    width: 800px;
+    resize: vertical;
+}
+
+select {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #3f9133;
+input.error,
+select.error,
+textarea.error {
+    border-color: #bd0303;
+    background-color: #ffffff;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .form-container {
-        padding: 20px;
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 16px;
     }
 
-    .section {
-        padding: 10px;
+    .form-section {
+        padding: 16px;
     }
 
-    h1 {
-        font-size: 22px;
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 
-    h2 {
-        font-size: 14px;
-    }
-
-    button {
-        padding: 10px;
-        font-size: 14px;
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
     }
 }
 
-@media (max-width: 480px) {
-    .form-container {
-        padding: 15px;
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 12px;
     }
 
-    h1 {
-        font-size: 20px;
-        margin-bottom: 15px;
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 16px; 
     }
 
-    .section {
-        padding: 8px;
-    }
-
-    h2 {
-        font-size: 12px;
-    }
-
-    .input-group input,
-    .input-group select,
-    .input-group textarea {
-        padding: 8px;
-    }
-
-    button {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .input-group.gender label {
-        margin: 0 5px;
+    .gender-group {
+        justify-content: center;
     }
 }

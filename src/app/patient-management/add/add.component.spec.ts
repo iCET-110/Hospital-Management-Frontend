@@ -21,7 +21,7 @@ describe('AddComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-// Define an interface for the patient data
+
 interface PatientData {
   firstName: string;
   lastName: string;
@@ -37,11 +37,11 @@ interface PatientData {
   remarks?: string;
 }
 
-// Function to handle form submission
+
 document.getElementById('add-patient-form')!.addEventListener('submit', function(event) {
   event.preventDefault();
   
-  // Collect form data
+
   const patientData: PatientData = {
       firstName: (document.getElementById('first-name') as HTMLInputElement).value,
       lastName: (document.getElementById('last-name') as HTMLInputElement).value,
@@ -57,9 +57,9 @@ document.getElementById('add-patient-form')!.addEventListener('submit', function
       remarks: (document.getElementById('remarks') as HTMLTextAreaElement).value,
   };
 
-  // Output patient data to console (You can replace this with actual processing code)
+  
   console.log('Patient Data:', patientData);
 
-  // Show success message
+  
   alert("Patient added successfully!");
 });
