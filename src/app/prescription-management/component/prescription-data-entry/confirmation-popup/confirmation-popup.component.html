@@ -1,10 +1,6 @@
 <div class="container">
     <div class="row">
         <form>
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                Add
-            </button> -->
-
             <!-- The Modal -->
             <div class="modal" id="myModal">
                 <div class="modal-dialog modal-dialog modal-dialog-centered">
@@ -27,45 +23,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="text-center">
-                                        <td>Paracetamol</td>
-                                        <td>1000 mg</td>
-                                        <td>Every 6H</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Amoxicillin</td>
-                                        <td>500 mg</td>
-                                        <td>Every 6H</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>Every 6H</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>Every 6H</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>3 to 5 days</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>3 to 5 days</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>3 to 5 days</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>3 to 5 days</td>
+                                    <tr class="text-center" *ngFor="let prescriptionDetails of drugsList;">
+                                        <td>{{prescriptionDetails.drug}}</td>
+                                        <td>{{prescriptionDetails.dosage}}</td>
+                                        <td>{{prescriptionDetails.frequency}}</td>
                                     </tr>
                                 </tbody>
                             </table>
