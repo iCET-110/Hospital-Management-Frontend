@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 
 @Component({
   selector: 'app-medical-records-handling',
