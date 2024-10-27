@@ -130,8 +130,8 @@ body{
           display: flex;
           justify-content: flex-end; /* Content within the container is aligned to the right */
           align-items: center; /* Vertically center the content */
-          padding: 10px 20px;
-          height: 70px;
+          /* padding: 10px 20px;
+          height: 70px; */
           margin-left: auto; /* Push the whole container to the right */
       }
       
