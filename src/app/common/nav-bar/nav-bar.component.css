@@ -3,7 +3,8 @@
     color: white;
     height: 100vh;
     margin: 0;
-    
+    position: fixed;
+    left: 0;
 }
 
 #sidebar a {
@@ -100,7 +101,7 @@
     background: linear-gradient(360deg, #80CD84,#BFE6C1, #E6FFE8);
     color: #38823E;
     font-size: xx-large; 
-    width: 120%;
+    width: 106.5%;
     height: 15%;
     text-align: center; 
     padding: 1rem; 

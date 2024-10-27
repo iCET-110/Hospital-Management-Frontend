@@ -8,7 +8,7 @@ describe('AddRecordsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddRecordsComponent]
+      imports: []
     })
     .compileComponents();
 

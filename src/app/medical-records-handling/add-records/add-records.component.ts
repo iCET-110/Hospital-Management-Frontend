@@ -5,8 +5,7 @@ import { PawaraComponent } from './pawara/pawara.component';
 @Component({
   selector: 'app-add-records',
   standalone: true,
-  imports: [YalinaComponent],
-  imports: [PawaraComponent],
+  imports: [YalinaComponent,PawaraComponent],
   templateUrl: './add-records.component.html',
   styleUrl: './add-records.component.css'
 })
