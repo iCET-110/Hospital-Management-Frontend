@@ -1,28 +1,72 @@
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.side-bar{
+  z-index: 2;
+  background-color: #E6FFE8;
+}
+
 .bg-light-green {
   background-color: #E6FFE8;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin-left: auto;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.bg-light-green {
+  background-color: #E6FFE8;
+  flex-grow: 1;
+  padding: 0;
+  margin-left: auto;
 }
 
 .container-fluid {
-  padding: 2%;
-  margin-top: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100;
+}
+
+.bg-light-green {
+  background-color: #E6FFE8;
+  flex-grow: 1;
+  padding: 0;
+  margin-left: auto;
+}
+.admin-info {
+  display: flex;
+  
+  
 }
 
 #admin-info {
+  justify-content: center;
+  align-items: center;
   background-color: white;
   border-radius: 50px;
   padding: 10px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 25%;
 }
 
 #top-bar {
-  background-color: #e6ffe8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #E6FFE8;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +82,9 @@ button.btn-lg {
 
 input[type="text"], input[type="email"], textarea, select, .form-control {
   background-color: #E6FFE8;
-  border: 1px solid #ddd;
+  border: 1px solid #E6FFE8;
   width: 100%;
+  min-height: 50px;
 }
 
 textarea {
@@ -48,7 +93,7 @@ textarea {
 
 .form-control:focus {
   box-shadow: none;
-  border-color: #28a745;
+  border-color: #38823E;
 }
 
 .btn-check:checked + .btn {
@@ -57,7 +102,7 @@ textarea {
 }
 
 .btn-outline-success {
-  background-color: #eaf8e7;
+  background-color: #E6FFE8;
   width: 150px;
   font-weight: bold;
   color: #38823E;
@@ -66,29 +111,35 @@ textarea {
 #search{
   max-width: 30%;
   border-radius: 20px;
-}
-
-#search {
-  border-radius: 50px;
   height: 45px;
 }
 
 .input-group-text {
-  background-color: #e6ffe8;
+  background-color: #E6FFE8;
   border: none;
   font-size: 1.2rem;
-  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
 }
 
 .input-group .form-control {
   border-left: 0;
+  margin-bottom: 10px;
+}
+
+.input-group, .row {
+  width: 100%;
+}
+
+.form-control{
+  min-height: 50px;
 }
 
 .delete-button{
-  max-width: 10%;
+  max-width: 20%;
+  background-color: #38823E;
+  color: white;
+  border-radius: 30px;
 }
 
 .head-text{
@@ -102,24 +153,37 @@ h1 {
 
 #form {
   background-color: white;
-  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin: 5%;
+  padding: 2%;
+  height: 80vh;
 }
 
-.form-container{
-  min-height: 100% !important;
+#image{
+  aspect-ratio: 1/1;
+  background-image: url(../assests/profile.jpg);
+  image-resolution: 10px;
+  background-size: cover; 
+  background-position: center;
+}
+
+.frame{
+  min-width: 100%;
+}
+
+.date-picker, .time-picker {
+  border-radius: 10px !important;
+  margin-bottom: 2%;
 }
 
 @media (max-width: 768px) {
-  .btn-outline-success {
+  #form {
     width: 100%;
-    margin-bottom: 10px;
+    margin: 2% auto;
   }
 
-  button {
+  .btn-outline-success {
     width: 100%;
   }
 }
