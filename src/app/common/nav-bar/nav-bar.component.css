@@ -82,6 +82,40 @@
     margin-right: 0;
     color: #38823E; 
 }
+#nav-reports {
+    text-align: left; 
+}
+
+#items-reports {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#items-submenu-reportsy a {
+    display: block;
+    width: max-content; 
+    margin-right: 0;
+    color: #38823E; 
+}
+#nav-records {
+    text-align: left; 
+}
+
+#items-records {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#items-submenu-records a {
+    display: block;
+    width: max-content; 
+    margin-right: 0;
+    color: #38823E; 
+}
 #log-out{
     align-items: end;
 }

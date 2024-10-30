@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ViewRecordsReportsComponent } from './view-records-reports/view-records-reports.component';
+import { MainDashboardComponent } from "./main-dashboard/main-dashboard.component";
 
 @Component({
   selector: 'app-medical-records-handling',
   standalone: true,
-  imports: [ViewRecordsReportsComponent],
+  imports: [MainDashboardComponent],
   templateUrl: './medical-records-handling.component.html',
   styleUrl: './medical-records-handling.component.css'
 })
