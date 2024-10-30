@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SachiniComponent } from '../../view-records-reports/sachini/sachini.component';
+import { SachiniComponent } from './sachini/sachini.component';
 import { DulangaComponent } from './dulanga/dulanga.component';
 
 @Component({
