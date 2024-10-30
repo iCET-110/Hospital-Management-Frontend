@@ -3,11 +3,11 @@ import { DilshaniComponent } from './dilshani/dilshani.component';
 import { YalinaComponent } from "./yalina/yalina.component";
 import { PawaraComponent } from './pawara/pawara.component';
 
+
 @Component({
   selector: 'app-add-records',
   standalone: true,
-  imports: [DilshaniComponent, YalinaComponent],
-  imports: [YalinaComponent,PawaraComponent],
+  imports: [YalinaComponent,PawaraComponent,DilshaniComponent],
   templateUrl: './add-records.component.html',
   styleUrl: './add-records.component.css'
 })
