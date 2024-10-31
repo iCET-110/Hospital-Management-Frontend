@@ -144,3 +144,45 @@
 #sidebar{
     border-radius: 0 0 10% 0;
 }
+@media (max-width: 992px) {
+    #sidebar {
+        width: 220px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px; 
+    }
+}
+
+@media (max-width: 576px) {
+    #sidebar {
+        width: 180px;
+    }
+}
+@media (max-width: 992px) {
+    .nav{
+        padding: 0.8rem; 
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 0.6rem; 
+        font-size: 0.85rem; 
+        text-align: center; 
+    }
+}
+
+
+@media (max-width: 576px) {
+    .nav {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
