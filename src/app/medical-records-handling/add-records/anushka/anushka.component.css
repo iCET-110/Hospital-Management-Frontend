@@ -22,7 +22,7 @@
     justify-content: flex-start; /* Aligns children to the start (left) */
 }
 .records-card {
-    background-color: white;
+    background-color: rgb(185, 253, 179);
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     padding: 2.5rem;
@@ -44,7 +44,7 @@
   
   .date-section {
     margin-bottom: 2.5rem;
-    background: #f5f9f5;
+    background: #9bf89b;
     padding: 1rem; /* Reduced padding */
     border-radius: 12px;
 }

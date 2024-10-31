@@ -21,10 +21,13 @@ interface PdfFile {
   templateUrl: './medical-records-handling.component.html',
   styleUrls: ['./medical-records-handling.component.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, NavBarComponent, AddRecordsComponent]
 })
 export class MedicalRecordsHandlingComponent {
   reportDate: string = '';
+  showSearchBar: boolean = false; // Property for toggling search bar
+  searchQuery: string = ''; // For capturing the search input
+
   allPdfFiles: PdfFile[] = [
     { 
       id: 1, 
@@ -51,11 +54,18 @@ export class MedicalRecordsHandlingComponent {
 
   isDownloading: { [key: number]: boolean } = {};
 
+  // Filter PDF files based on the report date
   get pdfFiles(): PdfFile[] {
     if (!this.reportDate) return [];
     return this.allPdfFiles.filter(file => file.date === this.reportDate);
   }
 
+  // Toggle search bar visibility
+  toggleSearchBar() {
+    this.showSearchBar = !this.showSearchBar;
+  }
+
+  // Handle file input for adding new reports
   handleFileInput(event: any) {
     const file = event.target.files[0];
     if (file) {
@@ -70,6 +80,7 @@ export class MedicalRecordsHandlingComponent {
     }
   }
 
+  // Download PDF file
   async downloadPdf(file: PdfFile) {
     if (!file.url || this.isDownloading[file.id]) return;
     
@@ -93,6 +104,7 @@ export class MedicalRecordsHandlingComponent {
     }
   }
 
+  // Reset the form
   resetForm() {
     this.reportDate = '';
     this.allPdfFiles.forEach(file => file.selected = false);

@@ -9,14 +9,14 @@ interface MedicalRecord {
 }
 
 @Component({
-  selector: 'app-anushka',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
+  selector: 'app-add-records',
+  standalone: true, // This makes the component standalone
+  imports: [CommonModule, FormsModule], // Ensure FormsModule is included
   templateUrl: './anushka.component.html',
   styleUrls: ['./anushka.component.css']
 })
 export class AnushkaComponent {
-  selectedDate: string = new Date().toISOString().split('T')[0];
+  selectedDate: string = new Date().toISOString().split('T')[0]; // Default to today's date
   
   records: MedicalRecord[] = [
     { name: 'General Medical Report.pdf', size: '2.3MB', type: 'pdf' },
@@ -25,7 +25,7 @@ export class AnushkaComponent {
   ];
 
   clearDate() {
-    this.selectedDate = '';
+    this.selectedDate = ''; // Clear the selected date
   }
 
   downloadRecord(record: MedicalRecord) {
