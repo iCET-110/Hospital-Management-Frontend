@@ -1,11 +1,10 @@
-/* Container styles */
 .container {
     margin: 0 auto;
     padding: 20px;
     background-color: #E6FFE8;
   }
 
-  /* Search section styles */
+
   .search-container {
     margin-bottom: 24px;
   }
@@ -41,13 +40,13 @@
     background-color: #236429;
   }
   
-  /* Content container styles */
+
   .content-container {
     display: grid;
     gap: 24px;
   }
   
-  /* Card styles */
+
   .card {
     background: #80CD84;
     border-radius: 12px;
@@ -72,7 +71,7 @@
     background-color: #80CD84;
   }
   
-  /* Information grid styles */
+
   .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -107,7 +106,7 @@
     font-size: 0.9rem;
   }
   
-  /* Responsive styles */
+
   @media screen and (max-width: 768px) {
     .container {
       padding: 16px;
