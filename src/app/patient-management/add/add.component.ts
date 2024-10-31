@@ -24,6 +24,12 @@ export class AddComponent implements OnInit {
     this.patientForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
+      gender: ['', Validators.required], // This code ensures single selection of either male or female.
+      // ... other form controls
+    });
+    this.patientForm = this.fb.group({
+      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      lastName: ['', [Validators.required, Validators.minLength(2)]],
       gender: ['', Validators.required],
       nic: ['', [
         Validators.required, 
