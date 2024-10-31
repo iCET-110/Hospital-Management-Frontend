@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MedicalRecordsHandlingComponent } from './medical-records-handling/medical-records-handling.component';
+import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MedicalRecordsHandlingComponent],
+  imports: [RouterOutlet,NavBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
