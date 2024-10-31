@@ -29,7 +29,7 @@ h3 {
 
 /* Filter Box Styling */
 .filter-box {
-    background-color: #aecdb0;
+    background-color: #80CD84;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -43,7 +43,7 @@ h3 {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #80CD84;
     border-radius: 50px;
 } 
 
@@ -61,7 +61,7 @@ h3 {
 
 .clear-filter{
     background-color: #ad3030;
-    color: #fff;
+    color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 25px;
@@ -95,7 +95,7 @@ h6{
 }
 /* Records Box Styling */
 .records-box {
-    background-color: #aecdb0;
+    background-color: #80CD84;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
