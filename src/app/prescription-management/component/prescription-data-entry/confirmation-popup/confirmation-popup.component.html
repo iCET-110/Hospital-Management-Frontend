@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
         <form>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                Add
-            </button>
 
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                Confirm
+            </button>
             <!-- The Modal -->
             <div class="modal" id="myModal">
-                <div class="modal-dialog ">
+                <div class="modal-dialog modal-dialog modal-dialog-centered">
                     <div class="modal-content">
 
                         <!-- Modal Header -->
@@ -17,8 +17,8 @@
                         </div>
 
                         <!-- Modal body -->
-                        <div class="modal-body">
-                            <table class="table table-success table-striped-columns">
+                        <div class="modal-body" style="width:100%;overflow:auto; max-height:400px;">
+                            <table class="table table-success table-striped-columns table-hover">
                                 <thead>
                                     <tr class="text-center">
                                         <th scope="col" class="text-success">Drug</th>
@@ -27,20 +27,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="text-center">
-                                        <td>Paracetamol</td>
-                                        <td>1000 mg</td>
-                                        <td>3-5 days</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Amoxicillin</td>
-                                        <td>500 mg</td>
-                                        <td>7 to 10 days</td>
-                                    </tr>
-                                    <tr class="text-center">
-                                        <td>Ibuprofen</td>
-                                        <td>400 mg</td>
-                                        <td>3 to 5 days</td>
+                                    <tr class="text-center" *ngFor="let prescriptionDetails of drugsList;">
+                                        <td>{{prescriptionDetails.drug}}</td>
+                                        <td>{{prescriptionDetails.dosage}}</td>
+                                        <td>{{prescriptionDetails.frequency}}</td>
                                     </tr>
                                 </tbody>
                             </table>
