@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { AddRecordsComponent } from "./add-records/add-records.component";
+import { NavBarComponent } from "../common/nav-bar/nav-bar.component";
+import { ViewRecordsReportsComponent } from "./view-records-reports/view-records-reports.component";
+
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
