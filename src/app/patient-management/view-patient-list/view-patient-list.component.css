@@ -1,48 +1,52 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #ffffff, #80CD84)
+    background: linear-gradient(to bottom, #ffffff, #80CD84);
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.container {
+.patient-list-container {
     background-color: #CAF4CC;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%; 
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-h1 {
+.patient-list-container h1 {
     color: #0c5e07;
     font-size: 32px;
     font-family: 'sans-serif';
-    margin-bottom: 20px; 
-    text-align: center; 
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.table th {
+.patient-list-container .table th {
     background-color: #38823E;
     font-family: 'sans-serif';
     font-size: 18px;
     color: #eeeee6;
-    text-align: center; 
-    vertical-align: middle; 
+    text-align: center;
+    vertical-align: middle;
 }
 
-.table-hover tbody tr:hover {
+.patient-list-container .table-hover tbody tr:hover {
     background-color: #eeeee6;
 }
 
-.table td {
+.patient-list-container .table td {
     font-family: 'sans-serif';
     text-align: center;
     vertical-align: middle;
-    padding: 10px; 
+    padding: 10px;
     font-size: 16px;
 }
 
-.table-responsive {
+
+.patient-list-container .table-responsive {
     overflow-x: auto;
     width: 100%;
 }

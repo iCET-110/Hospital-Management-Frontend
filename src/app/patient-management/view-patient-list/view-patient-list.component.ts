@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';  // Ensure the path is correct
+import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';
 
 interface Patient {
   name: string;
@@ -16,7 +16,7 @@ interface Patient {
 @Component({
   selector: 'app-view-patient-list',
   standalone: true,
-  imports: [ CommonModule , NavBarComponent ],  // Make sure NavBarComponent is imported
+  imports: [CommonModule, NavBarComponent],
   templateUrl: './view-patient-list.component.html',
   styleUrls: ['./view-patient-list.component.css']
 })
