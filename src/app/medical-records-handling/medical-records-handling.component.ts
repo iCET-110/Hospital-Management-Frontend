@@ -9,5 +9,5 @@ import { MainDashboardComponent } from "./main-dashboard/main-dashboard.componen
   styleUrl: './medical-records-handling.component.css'
 })
 export class MedicalRecordsHandlingComponent {
-
+  
 }
