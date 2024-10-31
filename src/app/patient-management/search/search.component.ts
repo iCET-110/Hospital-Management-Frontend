@@ -51,4 +51,8 @@ export class SearchComponent {
     // Implement search logic here
     console.log('Searching for:', this.searchTerm);
   }
+
+  ngOnInit(): void {
+    document.body.style.backgroundColor = '#E6FFE8';
+  }
 }
