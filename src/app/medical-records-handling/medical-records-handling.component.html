@@ -1,53 +1,59 @@
-<div class="container-fluid">
-    <div class="row text-center align-items-center heading">
-      <h1>Add Records</h1>
-    </div>
-    <div class="container h-100 mt-5 gx-0">
-      <div class="row">
-        <!-- Patient Report Section -->
-        <div class="col-4 mt-5">
-          <h3 class="fw-semibold text-center">Patient Report Details</h3>
-          <div class="list-container py-4 d-flex justify-content-center flex-wrap">
-            <input class="w-50" type="date" name="filter-date" id="filterDate" />
-            <table class="table w-75 mt-4">
-              <tbody>
-                <tr>
-                  <td>List Item 01</td>
-                  <td><input type="checkbox" name="" id="listItem1" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 02</td>
-                  <td><input type="checkbox" name="" id="listItem2" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 03</td>
-                  <td><input type="checkbox" name="" id="listItem3" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 04</td>
-                  <td><input type="checkbox" name="" id="listItem4" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 05</td>
-                  <td><input type="checkbox" name="" id="listItem5" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 06</td>
-                  <td><input type="checkbox" name="" id="listItem6" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 07</td>
-                  <td><input type="checkbox" name="" id="listItem7" /></td>
-                </tr>
-                <tr>
-                  <td>List Item 08</td>
-                  <td><input type="checkbox" name="" id="listItem8" /></td>
-                </tr>
-              </tbody>
-            </table>
+<div class="header">
+  <h1>Add Records</h1>
+</div>
+
+<div class="page-layout">
+  <div class="left-section">
+    <div class="card">
+      <h2>Patient Reports Details</h2>
+      
+      <div class="form-group">
+        <label>Select Date</label>
+        <input 
+          type="date" 
+          class="form-control" 
+          [(ngModel)]="reportDate"
+          placeholder="mm/dd/yyyy">
+      </div>
+
+      <div class="pdf-section" *ngIf="reportDate">
+        <h3>Available Reports for {{ reportDate | date:'mediumDate' }}</h3>
+        <div class="pdf-list" [class.empty]="pdfFiles.length === 0">
+          <div *ngIf="pdfFiles.length === 0" class="no-records">
+            No reports found for this date
+          </div>
+          <div *ngFor="let file of pdfFiles" class="pdf-item">
+            <div class="pdf-info">
+              <span class="pdf-name">{{ file.name }}</span>
+              <span class="pdf-size">{{ file.size }}</span>
+            </div>
+            <button 
+              class="download-btn" 
+              (click)="downloadPdf(file)" 
+              [disabled]="!file.url || isDownloading[file.id]"
+              [class.downloading]="isDownloading[file.id]"
+              title="Download">
+              <span class="download-icon" *ngIf="!isDownloading[file.id]">⬇</span>
+              <span class="loading-icon" *ngIf="isDownloading[file.id]">↻</span>
+            </button>
           </div>
         </div>
+        
+        <div class="file-upload">
+          <label class="upload-btn">
+            <input 
+              type="file" 
+              accept=".pdf"
+              (change)="handleFileInput($event)"
+              style="display: none;">
+            Add New Reports
+          </label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-secondary" (click)="resetForm()">Clear</button>
       </div>
     </div>
   </div>
-  
+</div>

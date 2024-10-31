@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { MedicalRecordsHandlingComponent } from './medical-records-handling/medical-records-handling.component';
-
 
 @Component({
   selector: 'app-root',
+  template: '<app-medical-records-handling></app-medical-records-handling>',
   standalone: true,
-  imports: [RouterOutlet,MedicalRecordsHandlingComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [MedicalRecordsHandlingComponent]
 })
-export class AppComponent {
-  title = 'HMS';
-}
+export class AppComponent {}
