@@ -1,18 +1,20 @@
 import { NgFor } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; // Add HttpClientModule
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import jsPDF from 'jspdf';
+import { ReportServiceService } from '../../service/report-service.service';
+
 
 @Component({
   selector: 'app-report-view',
   standalone: true,
-  imports: [HttpClientModule, RouterOutlet, NgFor],
+  imports: [HttpClientModule,RouterOutlet, NgFor],
   templateUrl: './report-view.component.html',
-  styleUrls: ['./report-view.component.css'],
+  styleUrls: ['./report-view.component.css']
 })
 export class ReportViewComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  constructor(private reportService: ReportServiceService) { }
 
   public productList: any = [];
 
@@ -21,31 +23,42 @@ export class ReportViewComponent implements OnInit {
   }
 
   public fetchReport() {
-    this.http
-      .get('https://fakestoreapi.com/products')
-      .subscribe((data: any) => {
-        console.log(data);
-        this.productList = data;
-      });
+    this.reportService.getProducts().subscribe((data: any) => {
+      console.log(data);
+      this.productList = data;
+    });
   }
 
-  async downloadPDF(product: any) {
+  async downloadPDF(report: any) {
     const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.width;
+    const pageHeight = doc.internal.pageSize.height;
+    const centerText = (text: string, y: number) => {
+      const textWidth = doc.getTextWidth(text);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(text, x, y);
+    };
     doc.setFontSize(16);
-    doc.text(`ID: ${product.id}`, 10, 20);
+    centerText(`ID: ${report.id}`, 20);            //============================================================= change id
     doc.setFontSize(14);
-    doc.text(`Title: ${product.title}`, 10, 30);
+    centerText(`Title: ${report.title}`, 30);      //============================================================= change title
     doc.setFontSize(12);
-    doc.text(`Description: ${product.description}`, 10, 40, { maxWidth: 180 });
-    doc.text(`Price: $${product.price}`, 10, 70);
+    const descriptionLines = doc.splitTextToSize(`Description: ${report.description}`, pageWidth - 20);
+    doc.text(descriptionLines, pageWidth / 2, 40, { align: 'center', maxWidth: pageWidth - 20 });
+    const lastY = 40 + (descriptionLines.length * 5);
+    centerText(`Price: $${report.price}`, lastY + 10);      //===================================================== change price
     try {
-      const imgData = await this.getBase64Image(product.image);
-      doc.addImage(imgData, 'JPEG', 10, 80, 50, 50);
+      const imgData = await this.getBase64Image(report.image);     //============================================== change image
+      const imgWidth = 50;
+      const imgHeight = 50;
+      const imgX = (pageWidth - imgWidth) / 2;
+      const imgY = lastY + 20;
+      doc.addImage(imgData, 'JPEG', imgX, imgY, imgWidth, imgHeight);
     } catch (error) {
       console.error('Error loading image:', error);
-      doc.text('Image not available', 10, 100);
+      centerText('Image not available', lastY + 20);     
     }
-    doc.save(`product-details-${product.id}.pdf`);
+    doc.save(`product-details-${report.id}.pdf`);           //===================================================== change pdf name
   }
 
   private getBase64Image(url: string): Promise<string> {
@@ -61,7 +74,7 @@ export class ReportViewComponent implements OnInit {
         const dataURL = canvas.toDataURL('image/jpeg');
         resolve(dataURL);
       };
-      img.onerror = (error) => reject(error);
+      img.onerror = error => reject(error);
       img.src = url;
     });
   }
