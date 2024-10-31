@@ -4,6 +4,7 @@ interface Patient {
     nic: string;
     dob: string;
     contact: string;
+    email:string;
     address: string;
     guardian: string;
     guardianContact: string;

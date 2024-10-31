@@ -1,15 +1,13 @@
-/* Container for the sidebar and main content */
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 10px;
+  margin: 0%;
+  background-color: #E6FFE8;
+  max-width: 1200px;
+  
 }
-
-/* Content section */
 .content {
   flex-basis: 80%;
   padding: 20px;
+  background-color: #80CD84;
 }
 
 h1 {
@@ -22,7 +20,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* Header styles */
+
 .header {
   display: flex;
   justify-content: space-between;
