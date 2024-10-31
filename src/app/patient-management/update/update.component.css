@@ -1,80 +1,140 @@
+/* Container for the sidebar and main content */
 .container {
-    display: flex;
-    height: 100vh;
-    background-color: #E6FFE8;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar-3 {
+  flex-basis: 20%;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+/* Content section */
+.content {
+  flex-basis: 80%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.patient-name {
+  padding: 10px;
+  font-size: 1em;
+  width: 70%;
+}
+.search-btn{
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}
+
+
+.save-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+/* Personal Info and Medical Info sections */
+.personal-info, .medical-info {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/* Gender selection */
+.gender {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gender label {
+  margin-right: 20px;
+}
+
+/* Radio buttons for admitted status */
+.form-group .option {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Medical info section */
+.option select {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
-  .sidebar {
-    width: 20%;
-    background-color: #2b6e3b;
+
+  .sidebar-3 {
+    flex-basis: 100%;
+    border-right: none;
+    margin-bottom: 20px;
   }
-  
+
   .content {
-    width: 80%;
-    padding: 30px;
+    flex-basis: 100%;
   }
-  
-  h1 {
-    font-size: 2rem;
-    color: #333;
-  }
-  
+
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  
-  .patient-name {
-    width: 70%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    background-color: #80CD84;
-  }
-  .option {
-    width: 40%;
-    
-   
-    
-  }
-  
+
   .save-btn {
-    padding: 10px 20px;
-    background-color: #236429;
-    color: white;
-    border: none;
-    border-radius: 25px;
-  }
-  
-  .personal-info, .medical-info {
-    background-color: #80CD84;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-  
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-  
-  input, select {
-    padding: 10px;
+    margin-top: 10px;
     width: 100%;
-    margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
-  
-  .gender, .admitted {
-    margin-top: 20px;
-  }
-  
-  label {
-    margin-right: 10px;
-    
-  }
-  
+}
