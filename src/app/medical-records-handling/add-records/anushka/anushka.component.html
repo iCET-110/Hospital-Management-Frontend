@@ -1,0 +1,38 @@
+<div class="records-container">
+    <h1 class="header">Add Records</h1>
+    
+    <div class="content-wrapper">
+        <div class="records-card">
+            <h2 class="section-title">View Medical Reports</h2>
+            
+            <div class="date-section">
+                <label>Select Date</label>
+                <input 
+                    type="date" 
+                    [(ngModel)]="selectedDate" 
+                    class="date-input">
+            </div>
+
+            <div class="records-section" *ngIf="selectedDate">
+                <h3 class="records-date">Available Reports for {{ selectedDate | date:'MMMM d, yyyy' }}</h3>
+                
+                <div class="records-list">
+                    <div *ngFor="let record of records" class="record-item">
+                        <div class="record-info">
+                            <span class="record-name">{{ record.name }}</span>
+                            <span class="record-size">{{ record.size }}</span>
+                        </div>
+                        <button class="download-btn" (click)="downloadRecord(record)" title="Download">
+                            <span class="download-icon">⭳</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="add-record-btn">Add New Report</button>
+                    <button class="clear-btn" (click)="clearDate()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

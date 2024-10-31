@@ -36,7 +36,6 @@
             "tsConfig": "tsconfig.app.json"
           }
         },
-        
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {

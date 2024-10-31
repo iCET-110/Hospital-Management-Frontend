@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { MedicalRecordsHandlingComponent } from './medical-records-handling/medical-records-handling.component';
+import { AnushkaComponent } from './medical-records-handling/add-records/anushka/anushka.component';
 
 export const routes: Routes = [
-  { path: '', component: MedicalRecordsHandlingComponent }
+  { path: 'medical-records/add-records', component: AnushkaComponent },
+  { path: '', redirectTo: '/medical-records/add-records', pathMatch: 'full' }
 ];
