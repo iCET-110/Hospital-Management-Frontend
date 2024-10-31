@@ -86,6 +86,7 @@ img {
     background-color: #E6FFE8;
     margin: 30px;
     text-align: center;
+    border: #E6FFE8;
     border-radius: 20px;
     padding: 10px;
 }
@@ -97,16 +98,18 @@ hr{
 
 .cardcategorydescription{
     width: 90%;
-    height: 70%;
+    height: 100px;
     background-color: #E6FFE8;
     margin: 30px;
     text-align: center;
     font-family:  'Lucida Grande';
+    border: #E6FFE8;
     border-radius: 20px;
     padding: 10px;
 }
 
 .btnadd{
+    border: #38823E;
     border-radius: 20px;
     align-items: center;
     font-weight: bold;
@@ -115,4 +118,11 @@ hr{
     font-size: 16px;
     margin-right: 60px;
     background-color: #38823E;
+    
+}
+
+.btnadd:hover {
+    background-color: #E6FFE8;
+    color: #38823E;
+    cursor: pointer; 
 }
