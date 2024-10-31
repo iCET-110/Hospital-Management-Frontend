@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.search-container {
+  background-color: #f8f8f8;
+  border: 0.125rem solid #80CD84;
+  border-radius: 1.25rem;
+  padding: 0.625rem 0.9375rem;
+}
+
+.search-bar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #0c5e07;
+  background-color: #f8f8f8;
+  border: none;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #80CD84;
+}
+
+#search-icon {
+  margin-right: 0.625rem;
+}
+
+.search-bar-container {
+  width: 31.125rem;
+  height: 3.3125rem;
+}
+
+.prescription-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1875rem;
+  color: #38823E;
+  font-weight: 600;
+  margin-right: 14.5rem;
+}
+
+.slider {
+  background-color: transparent;
+  border: none;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.search{
+  margin-left: 24.375rem;
+}
+
+.home-prescription-name{
+  margin-top: 1rem;
+  margin-left: 8rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  color: #000000;
+  opacity: 60%;
+  font-weight: 200;
+  margin-right: 14.5rem;
+
+}
