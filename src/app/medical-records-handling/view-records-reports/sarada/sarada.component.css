@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.body-class{
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E6FFE8;
+    padding: 20px;
+    margin-left: 100px;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 650px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Filter Box Styling */
+.filter-box {
+    background-color: #80CD84;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    width: 900px;
+
+}
+
+.filter-box input, .filter-box label {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #80CD84;
+    border-radius: 50px;
+} 
+
+.apply-filters {
+    background-color: #1f7d1f;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 450px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.clear-filter{
+    background-color: #ad3030;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.clear-filter:hover{
+    background-color: #700000;
+    
+}
+
+.apply-filters:hover{
+    background-color:#003400 ;
+}
+
+#record-id{
+    width: 700px;
+    margin-left: 20px;
+}
+
+#date{
+    width: 700px;
+    margin-left: 20px;
+}
+
+h6{
+    font-weight: bolder;
+}
+/* Records Box Styling */
+.records-box {
+    background-color: #80CD84;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    width: 900px;
+}
+
+.record {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.record span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 90px;
+
+}
+
+.view-btn {
+    background-color: #258925;
+    color: white;
+}
+
+.update-btn {
+    background-color: #628564;
+    color: rgb(255, 255, 255);
+}
+
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+}
+
+.delete-btn:hover{
+    background-color: #700000;
+}
+
+.view-btn:hover{
+    background-color: #003400;
+}
+
+.update-btn:hover{
+    background-color: #003400;
+}
+
+/* Pop-Up Window */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+  }
+  
+
+  .modal-dialog {
+    background: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 500px; 
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto; 
+  }
+  
+  .modal-header {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ 
+  .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+ 
+  .modal-body {
+    padding: 16px;
+    font-size: 0.9em;
+    color: #333; 
+    line-height: 1.6;
+  }
+  
+  .modal-footer {
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 300px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; 
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .body-class.blur {
+    filter: blur(4px); 
+  }
+  
+
+/* Responsive Page */
+@media (max-width: 1200px) {
+    .filter-box, .records-box {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .apply-filters, .clear-filter {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #record-id, #date {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        margin-right: 0;
+    }
+
+    .filter-box, .records-box {
+        width: 95%;
+    }
+
+    .apply-filters, .clear-filter {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .record {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .filter-box, .records-box {
+        width: 100%;
+    }
+
+    .apply-filters, .clear-filter {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .record {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
