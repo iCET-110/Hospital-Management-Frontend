@@ -10,4 +10,4 @@ import { HoldPatientComponent } from './component/hold-patient/hold-patient.comp
 })
 export class PrescriptionManagementComponent {
 
-}1
+}
