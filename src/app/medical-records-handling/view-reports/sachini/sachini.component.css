@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 1px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -9,11 +9,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #E6FFE8;
-    padding: 20px;
+   
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -92,4 +92,11 @@ h3 {
 
 h6{
     font-weight: bolder;
+}
+.main{
+    margin-left: 300px;
+    margin-top: -800px;
+}
+.container-fuild{
+     
 }
