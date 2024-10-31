@@ -23,7 +23,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/app/medical-records-handling/dashbord/resources",
+                "input": "src/app/medical-records-handling/main-dashboard/dashbord/resources",
                 "output": "resources"
               }
             ],
