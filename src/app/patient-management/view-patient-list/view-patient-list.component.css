@@ -7,12 +7,16 @@ body {
 }
 
 .patient-list-container {
+    position: fixed; 
+    top: 0; 
+    left: 25%; 
+    right: 0; 
     background-color: #CAF4CC;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
+    padding: 10px;
+    width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -45,16 +49,14 @@ body {
     font-size: 16px;
 }
 
-
 .patient-list-container .table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
     overflow-x: auto;
     width: 100%;
 }
 
-#navbar {
-    width: 100%;
-    background-color: #38823E;
-    padding: 10px 0;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
+
+
+
