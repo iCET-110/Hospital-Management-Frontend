@@ -1,0 +1,35 @@
+.card {
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 10px;
+}
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.btn-view {
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+}
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+}
+.scrollable-container {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 1px; /* To avoid content being hidden behind the scrollbar */
+}
+.main{
+  width: 900px;
+  margin-left: 350px;
+  margin-top: 40px;
+  background-color: #80CD84;
+  padding: 25px;
+ border-radius: 30px;
+
+}
