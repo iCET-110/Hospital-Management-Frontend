@@ -72,6 +72,9 @@ export class AppointmentUpdateComponent implements OnInit {
       txtCategory.value = foundAppointment.category;
       txtDesc.value = foundAppointment.description;
       genderChckBox.checked = foundAppointment.gender;
+      txtNic.disabled = true;
+      txtMobile.disabled = true;
+      txtEmail.disabled = true;
       this.searchText = "";
     } else {
       console.log("Appointment not found");
