@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="search-container">
+      <div class="search-box">
+        <input 
+          type="text" 
+          [(ngModel)]="searchTerm" 
+          placeholder="Search patient..."
+          class="search-input"
+        >
+        <button (click)="onSearch()" class="search-button">Search</button>
+      </div>
+    </div>
+  
+    
+    <div class="content-container">
+      <div class="card">
+        <div class="card-header">
+          <h2>Personal Information</h2>
+          <span class="admission-badge" *ngIf="selectedPatient.currentlyAdmitted">
+            Currently Admitted : Yes
+          </span>
+        </div>
+        
+        <div class="info-grid">
+          <div class="info-item">
+            <label>Name:</label>
+            <span>{{selectedPatient.name}}</span>
+          </div>
+          <div class="info-item">
+            <label>NIC:</label>
+            <span>{{selectedPatient.nic}}</span>
+          </div>
+          <div class="info-item">
+            <label>Date of Birth:</label>
+            <span>{{selectedPatient.dob}}</span>
+          </div>
+          <div class="info-item">
+            <label>Gender:</label>
+            <span>{{selectedPatient.gender}}</span>
+          </div>
+          <div class="info-item">
+            <label>Contact:</label>
+            <span>{{selectedPatient.contact}}</span>
+          </div>
+          <div class="info-item full-width">
+            <label>Address:</label>
+            <span>{{selectedPatient.residentAddress}}</span>
+          </div>
+          <div class="info-item">
+            <label>Guardian:</label>
+            <span>{{selectedPatient.guardian}}</span>
+          </div>
+          <div class="info-item">
+            <label>Guardian Contact:</label>
+            <span>{{selectedPatient.guardianContact}}</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card medical-card">
+        <div class="card-header">
+          <h2>Medical Information</h2>
+        </div>
+        
+        <div class="info-grid">
+          <div class="info-item">
+            <label>Blood Type:</label>
+            <span>{{selectedPatient.medicalInfo.bloodType}}</span>
+          </div>
+          <div class="info-item full-width">
+            <label>Allergies:</label>
+            <span>{{selectedPatient.medicalInfo.allergies.join(', ')}}</span>
+          </div>
+          <div class="info-item full-width">
+            <label>Remarks:</label>
+            <span>{{selectedPatient.medicalInfo.remarks}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
