@@ -1,50 +1,75 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpClientModule} from '@angular/common/http';
-import { NgModel } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { HoldPrescription } from '../../model/hold-prescription';
+import { Medication } from '../../model/medication';
+import { HoldPatientService } from '../../service/hold-patient-service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-hold-patient',
-  standalone:true,
-  imports: [HoldPatientComponent,HttpClientModule],
+  standalone: true,
+  imports: [FormsModule, CommonModule],
   templateUrl: './hold-patient.component.html',
   styleUrls: ['./hold-patient.component.css']
-  
 })
 export class HoldPatientComponent {
-  public patientData = { // Change the attributes as needed to match the html file here
-    patientId: 'P024',
-    name: 'Ruwan Perera',
-    gender: 'Male',
-    address: '12/17, Agaliya',
-    age: 34,
-    dob: '1988-08-24',
-    nic: '1992347658982',
-    email: 'ruwan.pr@gmail.com',
-    phone: '0713456987',
-    appointments: 12,
-    bloodType: 'A+',
-    remarks: 'Dust Mite Allergy, Food Allergies',
-    status: 'Active'
-  };
-    //URL- change it to match your localhost address
-  private apiUrl = 'http://your-backend-url/api/patients'; // Replace with your backend URL
+  public HoldPatient = [
 
-  constructor(private http: HttpClient) {}
+    {
+      "patientID": "P001",
+      "patientName": "Kamal",
+      "appoinmentID": "A001"
+    },
+    {
+      "patientID": "P002",
+      "patientName": "Ann",
+      "appoinmentID": "A002"
+    },
+    {
+      "patientID": "P003",
+      "patientName": "Nimali",
+      "appoinmentID": "A003"
+    },
+    {
+      "patientID": "P004",
+      "patientName": "Saman",
+      "appoinmentID": "A004"
+    },
+    {
+      "patientID": "P005",
+      "patientName": "Andrew",
+      "appoinmentID": "A005"
+    },
+    {
+      "patientID": "P006",
+      "patientName": "vimal",
+      "appoinmentID": "A006"
+    },
+    {
+      "patientID": "P007",
+      "patientName": "John",
+      "appoinmentID": "A007"
+    }
+  ];
 
-  // Method to handle the hold patient button click
-  holdPatient() {
+  patient: HoldPrescription;
 
-    //CODE BLOCK TO PASS THE PATIENT OBJECT TO BACKEND, PROVIDE NECESSARY BACKEND URL TO GET THE METHOD WORKING
+  constructor(private HoldPatientService: HoldPatientService) {
+    // Initialize the patient object with sample data and an empty medication list
+    this.patient = new HoldPrescription(1, 'John Doe', 101, [
+      new Medication('Aspirin', '100mg', 'Once a day'),
+      new Medication('Ibuprofen', '200mg', 'Twice a day')
+    ]);
+  }
 
-    /* this.http.post(`${this.apiUrl}/hold`, this.patientData).subscribe(
+  holdPatient(): void {
+    this.HoldPatientService.holdPatientData(this.patient).subscribe(
       response => {
-        console.log('Patient put on hold successfully', response);
+        console.log('Patient data held successfully:', response);
       },
       error => {
-        console.error('Error holding patient', error);
+        console.error('Error holding patient data:', error);
       }
-    );  */
-
-    console.log('Patient Data:', this.patientData);  }
+    );
+  }
 }
