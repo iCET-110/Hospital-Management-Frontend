@@ -106,6 +106,12 @@ h6{
     width: 900px;
 }
 
+.scrollable-container {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 2px; 
+  }
+
 .record {
     display: flex;
     justify-content: space-between;
@@ -158,8 +164,82 @@ button {
     background-color: #003400;
 }
 
-/* Responsive Page */
+/* Pop-Up Window */
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+  }
+  
+
+  .modal-dialog {
+    background: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 500px; 
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto; 
+  }
+  
+  .modal-header {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+   
+  .modal-body {
+    padding: 16px;
+    font-size: 0.9em;
+    color: #333; 
+    line-height: 1.6;
+  }
+  
+  .modal-footer {
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 400px;
+  }
+
+  .modal-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bolder;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: #aa0202; 
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .body-class.blur {
+    filter: blur(4px); 
+  }
+  
+
+/* Responsive Page */
 @media (max-width: 1200px) {
     .filter-box, .records-box {
         width: 90%;

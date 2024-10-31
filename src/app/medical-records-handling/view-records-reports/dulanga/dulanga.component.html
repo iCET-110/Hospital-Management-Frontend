@@ -14,52 +14,37 @@
 
     <!-- Records Section -->
     <div class="records-box">
-        <div class="record">
-            <span class="record-id">R001</span>
-            <span class="record-date">19/10/2024</span>
-            <span class="record-time">6:30 AM</span>
-            <button class="view-btn">View</button>
-            <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
+        <div class="scrollable-container">
+            <div class="record" *ngFor="let record of records">
+                <span class="record-id">{{ record.id }}</span>
+                <span class="record-date">{{ record.date }}</span>
+                <span class="record-time">{{ record.time }}</span>
+                <button (click)="openModal(record)" class="view-btn">View</button>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
+            </div>
         </div>
-
-        <div class="record">
-            <span class="record-id">R002</span>
-            <span class="record-date">19/10/2024</span>
-            <span class="record-time">6:30 AM</span>
-            <button class="view-btn">View</button>
-            <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-
-        <div class="record">
-            <span class="record-id">R002</span>
-            <span class="record-date">19/10/2024</span>
-            <span class="record-time">6:30 AM</span>
-            <button class="view-btn">View</button>
-            <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-
-        <div class="record">
-            <span class="record-id">R002</span>
-            <span class="record-date">19/10/2024</span>
-            <span class="record-time">6:30 AM</span>
-            <button class="view-btn">View</button>
-            <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-
     </div>
-    <!-- Model popup -->
-    <!-- <div class="modal" *ngIf="selectedRecord">
-        <div class="modal-content">
-          <span class="close" (click)="closeModal()">&times;</span>
-          <h4>Record Details</h4>
-          <p><strong>ID:</strong> {{ selectedRecord.id }}</p>
-          <p><strong>Date:</strong> {{ selectedRecord.date }}</p>
-          <p><strong>Time:</strong> {{ selectedRecord.time }}</p>
-          <p><strong>Details:</strong> {{ selectedRecord.details }}</p>
+
+    <!-- POP-UP Window -->
+
+    <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+        <div class="modal-dialog modal-dialog-scrollable" (click)="$event.stopPropagation()">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Record Details</h4>
+              <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+            </div>
+            <div class="modal-body">
+              <p><strong>Record ID:</strong> {{ selectedRecord?.id }}</p>
+              <p><strong>Date:</strong> {{ selectedRecord?.date }}</p>
+              <p><strong>Time:</strong> {{ selectedRecord?.time }}</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="update-btn">Update</button>
+            </div>
         </div>
-      </div> -->
+    </div>
+
 </div>
