@@ -34,8 +34,6 @@
             "scripts": ["bootstrap/dist/js/bootstrap.min.js"],
                  "src/styles.css"
                       "scripts": [],
-
-                      
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
