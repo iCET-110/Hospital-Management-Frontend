@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddRecordsComponent } from './add-records.component';
+import { YalinaComponent } from './yalina.component';
 
-describe('AddRecordsComponent', () => {
-  let component: AddRecordsComponent;
-  let fixture: ComponentFixture<AddRecordsComponent>;
+describe('YalinaComponent', () => {
+  let component: YalinaComponent;
+  let fixture: ComponentFixture<YalinaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: []
+      imports: [YalinaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddRecordsComponent);
+    fixture = TestBed.createComponent(YalinaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

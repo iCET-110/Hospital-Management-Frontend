@@ -1,0 +1,71 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E8F6EA;
+}
+.add-records {
+    position: absolute;
+    left: 60%;
+    top: 17%;
+    left: 56%;
+    width: 40%;
+    background-color: #80cd84;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.patient-info {
+    background-color: #E8F6EA;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.form-control, .btn {
+    border-radius: 4px;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+.btn-primary:hover{
+    background-color: #003400;
+}
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+.btn-success:hover{
+    background-color: #003400;
+}
+.btn-danger {
+    background-color: #F44336;
+    border-color: #F44336;
+}
+.btn-danger:hover{
+    background-color: #B71C1C;
+}
+.record-id {
+    background-color: #E8F6EA;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.patient-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.patient-info strong {
+    font-weight: 600;
+}
