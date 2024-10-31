@@ -15,7 +15,7 @@
                             <span class="date" style="opacity: 0.7;">10/18/2024</span>
                         </div>
                         <div class="col-3">
-                            <img src="../Assets/unsplash_tB5ZZtHZ_tI.png" alt="" class="profileImg">
+                            <img src="603f0854508fc1d2465d3195dec51e0f.jpeg" alt="" class="profileImg">
                         </div>
                         <div class="col-5" style="margin-left: 25px;">
                             <span>Nisila Perera</span><br>
@@ -27,52 +27,52 @@
             <div class="row fromSection col-12">
                 <div class="row-1 col-12">
                     <div style="position: relative; display: flex; align-items: center;">
-                        <input type="text" class="searchBar" placeholder="Search">
-                        <img src="Assets/01 align center.svg" alt="" class="searchIcon">
+                        <input [(ngModel)]="searchText" type="text" class="searchBar" placeholder="Search">
+                        <img src="01 align center.svg" alt="" class="searchIcon" (click)="searchPatient()">
                     </div>
                 </div>
                 <div class="row-2 col-12">
-                    <input type="text" name="" id="" class="apponitmentId">
+                    <input type="text" class="apponitmentId">
                 </div>
                 <div class="row-2 col-12" style="display: flex;">
                     <div class="col-5">
-                        <input type="text" name="" id="" placeholder="Enter Name" class="txtName">
+                        <input type="text" placeholder="Enter Name" class="txtName">
                     </div>
                     <div class="col-5">
-                        <input type="text" name="" id="" placeholder="Enter Nic Number" class="txtNic">
+                        <input type="text" placeholder="Enter Nic Number" class="txtNic">
                     </div>
                 </div>
                 <div class="row-2 col-12" style="display: flex;">
                     <div class="col-5">
-                        <input type="text" name="" id="" placeholder="Enter Mobile Number" class="txtMobile">
+                        <input type="text" placeholder="Enter Mobile Number" class="txtMobile">
                     </div>
                     <div class="col-5">
-                        <input type="text" name="" id="" placeholder="Enter Email Address" class="txtEmail">
+                        <input type="text" placeholder="Enter Email Address" class="txtEmail">
                     </div>
                 </div>
                 <div class="row-2 col-12" style="display: flex;">
                     <div class="col-4 maleFemaleBtn" style="display: flex;">
                         <label class="switch">
-                            <input type="checkbox" checked="">
+                            <input type="checkbox" checked="" class="genderChckBox">
                         </label>
                     </div>
                     <div class="col-3">
-                        <input type="date" name="" id="" class="aptDate">
+                        <input type="date" class="aptDate">
                     </div>
                     <div class="col-3">
-                        <input type="time" name="" id="" class="aptTime">
+                        <input type="time" class="aptTime">
                     </div>
                 </div>
                 <div class="row-2 col-12" style="display: flex;">
                     <div class="col-5">
-                        <input type="text" name="" id="" placeholder="Enter Description" class="txtDesc">
+                        <input type="text" placeholder="Enter Description" class="txtDesc">
                     </div>
                     <div class="col-5">
-                        <input type="" name="" id="" placeholder="Enter Category" class="txtCategory">
+                        <input type="" placeholder="Enter Category" class="txtCategory">
                     </div>
                 </div>
                 <div class="row-1 col-12">
-                    <button class="btnUpdate">update</button>
+                    <button class="btnUpdate" (click)="update()">update</button>
                 </div>
             </div>
         </div>
