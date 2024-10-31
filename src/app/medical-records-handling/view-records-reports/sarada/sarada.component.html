@@ -4,21 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Records</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sarada.component.css">
-    
 </head>
 <body>
-    <div class="container-fuild">
-        <!-- Header Section -->
-        <header>
-            <h1>View Records</h1>
-        </header>
-        <div class="nav">
-            <div class="home">
-                <a href="#" id="hometag">Medical Reports & Records</a>
-                <i class="bi bi-arrow-right" id="arrow"></i>
-                <span id="#" class="view">View Records</span>
+    <div>
+        <h3>View Records</h3>
+        <div class="filter-box">
+            <h6>Filter By Record ID</h6>
+            <input type="text" id="record-id" placeholder="Enter Record ID">
+            <br> <br>
+            <h6>Filter By Record ID</h6>
+            <input type="date" id="date">
+            <br><br>
+
+            <button class="apply-filters">Apply Filters</button>
+            <button class="clear-filter">Clear Filters</button>
+        </div>
+        
+        <!-- Records Section -->
+        <div class="records-box">
+            <div class="record">
+                <span class="record-id">R001</span>
+                <span class="record-date">19/10/2024</span>
+                <span class="record-time">6:30 AM</span>
+                <button class="view-btn">View</button>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
             </div>
+
+            <div class="record">
+                <span class="record-id">R002</span>
+                <span class="record-date">19/10/2024</span>
+                <span class="record-time">6:30 AM</span>
+                <button class="view-btn">View</button>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+
+            <div class="record">
+                <span class="record-id">R002</span>
+                <span class="record-date">19/10/2024</span>
+                <span class="record-time">6:30 AM</span>
+                <button class="view-btn">View</button>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            
+            <div class="record">
+                <span class="record-id">R002</span>
+                <span class="record-date">19/10/2024</span>
+                <span class="record-time">6:30 AM</span>
+                <button class="view-btn">View</button>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            
         </div>
     </div>
 </body>
