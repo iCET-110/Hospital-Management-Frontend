@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Records</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sarada.component.css">
-</head>
-<body>
-    <div>
+    <div class="body-class">
         <h3>View Records</h3>
         <div class="filter-box">
             <h6>Filter By Record ID</h6>
@@ -18,8 +8,8 @@
             <input type="date" id="date">
             <br><br>
 
-            <button class="apply-filters">Apply Filters</button>
-            <button class="clear-filter">Clear Filters</button>
+            <button class="apply-filters"(click)="applyForm()">Apply Filters</button>
+            <button class="clear-filter" (click)="clearForm()">Clear Filters</button>
         </div>
         
         <!-- Records Section -->
@@ -62,5 +52,3 @@
             
         </div>
     </div>
-</body>
-</html>
