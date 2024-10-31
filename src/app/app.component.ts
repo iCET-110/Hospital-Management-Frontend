@@ -12,8 +12,7 @@ import { PrescriptionManagementComponent } from "./prescription-management/presc
   selector: 'app-root',
   standalone: true,
 
-  imports: [RouterOutlet,SearchComponent],
-  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
+  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent,SearchComponent],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

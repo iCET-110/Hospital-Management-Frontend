@@ -8,6 +8,7 @@ interface Patient {
   dob: string;
   gender: string;
   contact: string;
+  email: string;
   residentAddress: string;
   guardian: string;
   guardianContact: string;
@@ -34,6 +35,7 @@ export class SearchComponent {
     dob: '2003/10/20',
     gender: 'male',
     contact: '078 817 9855',
+    email: 'shane@gamil.com',
     residentAddress: '21/A, Cinnamon watta Road, Colombo 07',
     guardian: 'Mr. Ranasinghe',
     guardianContact: '071 172 9692',
