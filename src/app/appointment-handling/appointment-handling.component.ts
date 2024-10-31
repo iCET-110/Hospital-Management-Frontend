@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { AppointmentSearchComponent } from "./appointment-search/appointment-search.component";
+import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
 
 @Component({
   selector: 'app-appointment-handling',
   standalone: true,
-  imports: [AppointmentSearchComponent],
+  imports: [AddAppointmentComponent],
   templateUrl: './appointment-handling.component.html',
   styleUrl: './appointment-handling.component.css'
 })
