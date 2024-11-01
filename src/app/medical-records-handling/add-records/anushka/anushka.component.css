@@ -1,214 +1,251 @@
-.records-container {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #e8f5e9;
-  }
-  
-  .header {
-    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-    color: white;
-    margin: 0;
-    padding: 3rem;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 500;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    position: relative;
-  }
-  
-  .content-wrapper {
-    padding: 2rem;
-    display: flex;
-    justify-content: flex-start; /* Aligns children to the start (left) */
-}
-.records-card {
-    background-color: rgb(185, 253, 179);
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    padding: 2.5rem;
-    width: 50%; /* Adjust width as needed */
-    max-width: 500px; /* Set a max-width if desired */
-    margin: 2rem 0; /* Top and bottom margin, left margin defaults to 0 */
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
-  
-  .section-title {
-    color: #2e7d32;
-    margin: 0 0 2rem 0;
-    font-size: 1.8rem;
-    font-weight: 500;
-    border-bottom: 2px solid #e8f5e9;
-    padding-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .date-section {
-    margin-bottom: 2.5rem;
-    background: #9bf89b;
-    padding: 1rem; /* Reduced padding */
-    border-radius: 12px;
+.page-layout {
+  display: flex;
+  justify-content: flex-start; 
+  padding: 20px;
+  background-color: #d4f3d4;
+  min-height: calc(100vh - 100px);
 }
 
-.date-section label {
-    display: block;
-    margin-bottom: 0.5rem; /* Reduced margin */
-    color: #2e7d32;
-    font-weight: 500;
-    font-size: 1rem; /* Reduced font size */
+.left-section {
+  width: 400px;
+  margin-left: 340px;
 }
 
-.date-input {
-    width: 100%;
-    padding: 0.75rem; /* Reduced padding */
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 0.9rem; /* Reduced font size */
-    transition: all 0.3s ease;
-    background: white;
+.card {
+  background: rgb(124, 219, 140);
+  border-radius: 12px;
+  padding: 5px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 400px; 
+  max-width: 100%; 
 }
 
-.date-input:focus {
-    border-color: #2e7d32;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f3d1f;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
 }
 
-  
-  .records-date {
-    color: #2e7d32;
-    font-size: 1.3rem;
-    margin: 2rem 0 1.5rem;
-    font-weight: 500;
-    text-align: center;
-  }
-  
-  .records-list {
-    background-color: #fff;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
-    overflow: hidden;
-  }
-  
-  .record-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.2s;
-  }
-  
-  .record-item:hover {
-    background-color: #f5f9f5;
-  }
-  
-  .record-item:last-child {
-    border-bottom: none;
-  }
-  
-  .record-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .record-name {
-    color: #333;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  
-  .record-size {
-    color: #666;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .record-size::before {
-    content: "📄";
-    font-size: 1rem;
-  }
-  
-  .download-btn {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
-  }
-  
-  .download-btn:hover {
-    background-color: #1b5e20;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
-  }
-  
-  .download-btn:active {
-    transform: translateY(0);
-  }
-  
-  .download-icon {
-    font-size: 1.4rem;
-  }
-  
-  .actions {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .add-record-btn {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
-    min-width: 180px;
-  }
-  
-  .add-record-btn:hover {
-    background-color: #1b5e20;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
-  }
-  
-  .add-record-btn:active {
-    transform: translateY(0);
-  }
-  
-  .clear-btn {
-    background-color: white;
-    border: 2px solid #2e7d32;
-    color: #2e7d32;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    min-width: 180px;
-  }
-  
-  .clear-btn:hover {
-    background-color: #f5f9f5;
-    transform: translateY(-2px);
-  }
-  
-  .clear-btn:active {
-    transform: translateY(0);
-  }
+.form-group {
+  margin-bottom: 15px; 
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 80%;
+  padding: 10px; 
+  border: 2px solid #e0e0e0;
+  border-radius: 6px; 
+  font-size: 14px; 
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.pdf-section {
+  margin-top: 30px;
+}
+
+.pdf-section h3 {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.pdf-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #cbf3c5;
+}
+
+.pdf-list.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.no-records {
+  color: #666;
+  font-style: italic;
+}
+
+.pdf-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  align-items: center;
+}
+
+.pdf-item:hover {
+  background-color: #f5f5f5;
+}
+
+.pdf-item:last-child {
+  border-bottom: none;
+}
+
+.pdf-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pdf-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.pdf-size {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.download-btn {
+  background: #b4f1b7;
+  border: none;
+  color: rgb(153, 209, 148);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+}
+
+.download-btn:hover:not(:disabled) {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+}
+
+.download-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+}
+
+.download-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.download-btn.downloading {
+  background-color: #1b5e20;
+}
+
+.download-icon {
+  font-size: 20px;
+}
+
+.loading-icon {
+  font-size: 20px;
+  animation: spin 1s linear infinite;
+}
+
+.file-upload {
+  margin: 20px 0;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+}
+
+.upload-btn:hover {
+  background-color: #1b5e20;
+}
+
+.actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 5px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: -12px;
+}
+
+.btn-secondary {
+  background-color: #c3fab2;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #70f548;
+}
+
+.trigger-btn {
+  background: #b4f1b7;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+  margin-left: 330px;
+  margin-top: -40px;
+}
+
+.trigger-btn:hover {
+  background-color: #70f548;
+}
+
+.search-icon {
+  font-size: 16px;
+}
+
+.search-bar {
+  margin: 10px 0;
+  padding: 5px;
+  background: #aaf8b1;
+  border-radius: 5px;
+}
