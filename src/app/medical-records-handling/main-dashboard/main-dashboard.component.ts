@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './main-dashboard.component.html',
-  styleUrls: ['./main-dashboard.component.css' ]
+  styleUrl: './main-dashboard.component.css'
 })
 export class MainDashboardComponent {ngOnInit(): void {
   document.body.style.backgroundColor = '#E6FFE8';
