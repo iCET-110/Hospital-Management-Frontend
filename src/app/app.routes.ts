@@ -16,4 +16,5 @@ export const routes: Routes = [
     path: 'view-records',
     component: ViewRecordsReportsComponent,
   },
+
 ];
