@@ -1,0 +1,50 @@
+<div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-content">
+        <div class="alert-box">
+          <div class="alert-icon">
+            <span>&#10067;</span>
+          </div>
+          <div class="alert-content">
+            <h2>Do you want to update this appointment </h2>
+            <div class="alert-details">
+              <div>
+                <label for="appointment-id"
+                  ><strong>Appointment Id</strong></label>
+                <input type="text" id="appointment-id" value="" readonly />
+              </div>
+              <div>
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" id="name" value="" readonly />
+              </div>
+              <div>
+                <label for="contact"><strong>Contact No.</strong></label>
+                <input type="text" id="contact" value="" readonly />
+              </div>
+              <div>
+                <label for="category"><strong>Category</strong></label>
+                <input type="text" id="category" value="" readonly />
+              </div>
+              <div>
+                <label for="category"><strong>Appointment Date</strong></label>
+                <input type="text" id="category" value="" readonly />
+              </div>
+              <div>
+                <label for="category"><strong>Appointment Time</strong></label>
+                <input type="text" id="category" value="" readonly />
+              </div>
+              <div>
+                <label for="category"><strong>Description</strong></label>
+                <input type="text" id="category" value="" readonly />
+              </div>
+            </div>
+          </div>
+          <div class="alert-button">
+            <button (click)="viewAppointment()">Cancel</button>
+            <button (click)="closeAlert()">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
