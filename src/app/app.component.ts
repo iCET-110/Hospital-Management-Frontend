@@ -9,6 +9,7 @@ import { ReportViewComponent } from "./prescription-management/component/report-
 import { PatientInfoComponent } from "./prescription-management/component/patient-info/patient-info.component";
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
