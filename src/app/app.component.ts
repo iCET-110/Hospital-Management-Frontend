@@ -7,12 +7,16 @@ import { MedicalRecordsHandlingComponent } from "./medical-records-handling/medi
 import { PatientManagementComponent } from "./patient-management/patient-management.component";
 import { PrescriptionManagementComponent } from "./prescription-management/prescription-management.component";
 
-
+import { ViewPatientListComponent } from './patient-management/view-patient-list/view-patient-list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
 
+
   imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent,SearchComponent],
+  imports: [ViewPatientListComponent,RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
+  imports: [RouterOutlet,SearchComponent],
+  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
