@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ConfirmationPopupComponent } from './confirmation-popup/confirmation-popup.component';
 

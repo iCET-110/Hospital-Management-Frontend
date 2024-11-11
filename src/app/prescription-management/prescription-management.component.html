@@ -1,1 +1,22 @@
-
+<!-- Search Bar -->
+<div class="row mt-1 d-flex justify-content-center">
+    <div class="col-md-6 col-lg-4 w-75">
+        <app-search (search)="handleSearch($event)"></app-search>
+    </div>
+ </div>
+ 
+ <!-- Middle -->
+ <div class="row mt-2">
+     <!-- Data Forms -->
+     <div class="col-11">
+         <!-- Patient Details -->
+         <div class="row w-75"><app-patient-info></app-patient-info></div>
+ 
+         <!-- Data Entry UI -->
+          <div class="row w-75"><app-prescription-data-entry></app-prescription-data-entry></div>
+     </div>
+     <!-- Report View -->
+      <div class="col-1">
+         <app-report-view></app-report-view>
+      </div>
+ </div>
