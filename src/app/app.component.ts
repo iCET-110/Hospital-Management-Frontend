@@ -6,6 +6,9 @@ import { MedicalRecordsHandlingComponent } from "./medical-records-handling/medi
 import { PatientManagementComponent } from "./patient-management/patient-management.component";
 import { PrescriptionManagementComponent } from "./prescription-management/prescription-management.component";
 import { ReportViewComponent } from "./prescription-management/component/report-view/report-view.component";
+import { PatientInfoComponent } from "./prescription-management/component/patient-info/patient-info.component";
+
+
 
 @Component({
   selector: 'app-root',

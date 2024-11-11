@@ -57,3 +57,22 @@
         </div>
     </div>
 </div>
+<div class="fulcard">
+<div class="frame">
+  <div class="header-container ">
+    <h3>Previous Reports</h3>
+    <i class="bi bi-funnel-fill"></i>
+  </div>
+<div class="scrollable-container">
+  <div class="card-shadow" *ngFor="let report of productList" (click)="downloadPDF(report)">
+    <div class="d-flex align-items-center">
+      <div class="fs-2 me-3">
+        <i class="bi bi-filetype-pdf"></i>
+      </div> <h5>Id : {{report.id}}</h5>     <!--===================== change id ======================-->
+    </div>
+  </div>
+</div><br><div class="button-container">
+    <div>
+    </div><i class="bi bi-stop-circle-fill"></i>
+  </div>
+</div></div>
