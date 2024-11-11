@@ -12,7 +12,7 @@ import { AppointmentUpdateComponent } from "./appointment-handling/appointment-u
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, AppointmentSearchComponent, AppointmentViewComponent, AppointmentUpdateComponent],
+  imports: [RouterOutlet, NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, , AppointmentViewComponent, AppointmentUpdateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
