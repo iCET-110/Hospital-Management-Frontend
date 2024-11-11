@@ -2,204 +2,21 @@
     <div class="patient-report">
         <h2>Patient Report Details</h2>
         <div class="date-picker-container">
-            <input type="date" id="reportDate" name="reportDate" class="form-control mb-3">
+            <input (change)="searchReportsByDate($event)" type="date" id="reportDate" name="reportDate" class="form-control mb-3" autocomplete="off">
         </div>
         <div class="report-section">
             <h3>Reports</h3>
-            <div class="checkbox-container">
-                <label>Blood Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Blood Test: Hemoglobin 14.2 g/dL, WBC 7.5 x10^9/L, Platelets 250 x10^9/L">
+            <div class="checkbox-container" *ngFor="let report of displayReportList">
+                <label>{{report.name}}</label>
+                <input type="checkbox" (change)="addReport(report)" class="report-item" data-type="report" data-content="Blood Test: Hemoglobin 14.2 g/dL, WBC 7.5 x10^9/L, Platelets 250 x10^9/L" autocomplete="off">
             </div>
-            <div class="checkbox-container">
-                <label>X-Ray Results</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="X-Ray Results: No abnormalities detected in chest X-ray">
-            </div>
-            <div class="checkbox-container">
-                <label>MRI Scan</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="MRI Scan: Minor disc herniation at L4-L5 level">
-            </div>
-            <div class="checkbox-container">
-                <label>Allergy Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Allergy Test: Positive for pollen and dust mites">
-            </div>
-            <div class="checkbox-container">
-                <label>ECG Results</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="ECG Results: Normal sinus rhythm, no ST-T wave changes">
-            </div>
-            <div class="checkbox-container">
-                <label>Lipid Profile</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Lipid Profile: Total Cholesterol 180 mg/dL, LDL 100 mg/dL, HDL 50 mg/dL">
-            </div>
-            <div class="checkbox-container">
-                <label>Urine Analysis</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Urine Analysis: No abnormalities detected">
-            </div>
-            <div class="checkbox-container">
-                <label>Thyroid Function</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Thyroid Function: TSH 2.5 mIU/L, T4 1.1 ng/dL (within normal range)">
-            </div>
-            <div class="checkbox-container">
-                <label>Vitamin D Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Vitamin D Test: 25 ng/mL (Insufficient, supplementation recommended)">
-            </div>
-            <div class="checkbox-container">
-                <label>CT Scan</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="CT Scan: No significant abnormalities observed in abdominal region">
-            </div>
-            <div class="checkbox-container">
-                <label>Bone Density Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Bone Density Test: T-score -1.2, indicating osteopenia">
-            </div>
-            <div class="checkbox-container">
-                <label>Colonoscopy</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Colonoscopy: No polyps or abnormalities detected">
-            </div>
-            <div class="checkbox-container">
-                <label>Mammogram</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Mammogram: No signs of suspicious masses or calcifications">
-            </div>
-            <div class="checkbox-container">
-                <label>Prostate-Specific Antigen (PSA) Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="PSA Test: 2.1 ng/mL (within normal range)">
-            </div>
-            <div class="checkbox-container">
-                <label>Liver Function Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Liver Function Test: ALT 25 U/L, AST 28 U/L (within normal range)">
-            </div>
-            <div class="checkbox-container">
-                <label>Kidney Function Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Kidney Function Test: Creatinine 0.9 mg/dL, eGFR 95 mL/min/1.73m2">
-            </div>
-            <div class="checkbox-container">
-                <label>Hemoglobin A1C</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Hemoglobin A1C: 5.6% (normal range)">
-            </div>
-            <div class="checkbox-container">
-                <label>Stool Analysis</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Stool Analysis: Negative for parasites and occult blood">
-            </div>
-            <div class="checkbox-container">
-                <label>Pap Smear</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Pap Smear: Normal, no abnormal cells detected">
-            </div>
-            <div class="checkbox-container">
-                <label>Skin Biopsy</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Skin Biopsy: Benign nevus, no signs of malignancy">
-            </div>
-            <div class="checkbox-container">
-                <label>Hearing Test</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Hearing Test: Mild high-frequency hearing loss in left ear">
-            </div>
-            <div class="checkbox-container">
-                <label>Eye Examination</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Eye Examination: 20/20 vision, no signs of glaucoma or cataracts">
-            </div>
-            <div class="checkbox-container">
-                <label>Spirometry</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="Spirometry: FEV1/FVC ratio 0.75, indicating normal lung function">
-            </div>
-            <div class="checkbox-container">
-                <label>Electroencephalogram (EEG)</label>
-                <input type="checkbox" class="report-item" data-type="report" data-content="EEG: Normal brain wave patterns, no epileptiform activity">
-            </div>
+            
         </div>
         <div class="report-section">
             <h3>Prescriptions</h3>
-            <div class="checkbox-container">
-                <label>Amlodipine 5mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Amlodipine 5mg, once daily for hypertension">
-            </div>
-            <div class="checkbox-container">
-                <label>Metformin 500mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Metformin 500mg, twice daily with meals for diabetes">
-            </div>
-            <div class="checkbox-container">
-                <label>Levothyroxine 50mcg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Levothyroxine 50mcg, once daily on empty stomach for hypothyroidism">
-            </div>
-            <div class="checkbox-container">
-                <label>Atorvastatin 20mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Atorvastatin 20mg, once daily at bedtime for high cholesterol">
-            </div>
-            <div class="checkbox-container">
-                <label>Omeprazole 20mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Omeprazole 20mg, once daily before breakfast for GERD">
-            </div>
-            <div class="checkbox-container">
-                <label>Sertraline 50mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Sertraline 50mg, once daily for depression">
-            </div>
-            <div class="checkbox-container">
-                <label>Albuterol Inhaler</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Albuterol Inhaler, 2 puffs every 4-6 hours as needed for asthma">
-            </div>
-            <div class="checkbox-container">
-                <label>Lisinopril 10mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Lisinopril 10mg, once daily for hypertension">
-            </div>
-            <div class="checkbox-container">
-                <label>Gabapentin 300mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Gabapentin 300mg, three times daily for neuropathic pain">
-            </div>
-            <div class="checkbox-container">
-                <label>Escitalopram 10mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Escitalopram 10mg, once daily for anxiety">
-            </div>
-            <div class="checkbox-container">
-                <label>Metoprolol 25mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Metoprolol 25mg, twice daily for hypertension">
-            </div>
-            <div class="checkbox-container">
-                <label>Simvastatin 40mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Simvastatin 40mg, once daily at bedtime for high cholesterol">
-            </div>
-            <div class="checkbox-container">
-                <label>Pantoprazole 40mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Pantoprazole 40mg, once daily before breakfast for ulcers">
-            </div>
-            <div class="checkbox-container">
-                <label>Fluoxetine 20mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Fluoxetine 20mg, once daily for depression">
-            </div>
-            <div class="checkbox-container">
-                <label>Losartan 50mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Losartan 50mg, once daily for hypertension">
-            </div>
-            <div class="checkbox-container">
-                <label>Metformin ER 1000mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Metformin ER 1000mg, once daily with dinner for diabetes">
-            </div>
-            <div class="checkbox-container">
-                <label>Citalopram 20mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Citalopram 20mg, once daily for depression">
-            </div>
-            <div class="checkbox-container">
-                <label>Montelukast 10mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Montelukast 10mg, once daily at bedtime for asthma">
-            </div>
-            <div class="checkbox-container">
-                <label>Hydrocodone/Acetaminophen 5/325mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Hydrocodone/Acetaminophen 5/325mg, 1-2 tablets every 4-6 hours as needed for pain">
-            </div>
-            <div class="checkbox-container">
-                <label>Amoxicillin 500mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Amoxicillin 500mg, three times daily for 10 days for bacterial infection">
-            </div>
-            <div class="checkbox-container">
-                <label>Furosemide 40mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Furosemide 40mg, once daily in the morning for edema">
-            </div>
-            <div class="checkbox-container">
-                <label>Warfarin 5mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Warfarin 5mg, once daily at same time each day for anticoagulation">
-            </div>
-            <div class="checkbox-container">
-                <label>Venlafaxine XR 75mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Venlafaxine XR 75mg, once daily for depression">
-            </div>
-            <div class="checkbox-container">
-                <label>Duloxetine 30mg</label>
-                <input type="checkbox" class="report-item" data-type="prescription" data-content="Duloxetine 30mg, once daily for depression and anxiety">
+            <div class="checkbox-container" *ngFor="let prescription of displayPrescriptionList">
+                <label>{{prescription.name}}</label>
+                <input type="checkbox" (change)="addPrescription(prescription)" class="report-item" data-type="prescription" data-content="Amlodipine 5mg, once daily for hypertension" autocomplete="off">
             </div>
         </div>
     </div>
