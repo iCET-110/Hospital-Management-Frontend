@@ -5,9 +5,9 @@ import { ViewRecordsReportsComponent } from './medical-records-handling/view-rec
 
 export const routes: Routes = [
     {
-        path: 'medical-record-dashboard',
+        path: '',
         component: MainDashboardComponent,
-        children: [
+    },
           {
             path: 'add-records',
             component: AddRecordsComponent
@@ -17,5 +17,4 @@ export const routes: Routes = [
             component: ViewRecordsReportsComponent
           }
         ]
-      }
-];
+      

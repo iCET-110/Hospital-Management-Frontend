@@ -7,7 +7,7 @@ import { ViewRecordsReportsComponent } from "./view-records-reports/view-records
 @Component({
   selector: 'app-medical-records-handling',
   standalone: true,
-  imports: [AddRecordsComponent, AddRecordsComponent, MainDashboardComponent, NavBarComponent, ViewRecordsReportsComponent],
+  imports: [AddRecordsComponent, NavBarComponent, ViewRecordsReportsComponent],
   templateUrl: './medical-records-handling.component.html',
   styleUrl: './medical-records-handling.component.css'
 })
