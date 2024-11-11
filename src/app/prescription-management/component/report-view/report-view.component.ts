@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http'; // Add HttpClientModule
+import { HttpClientModule } from '@angular/common/http'; 
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import jsPDF from 'jspdf';
@@ -39,16 +39,16 @@ export class ReportViewComponent implements OnInit {
       doc.text(text, x, y);
     };
     doc.setFontSize(16);
-    centerText(`ID: ${report.id}`, 20);            //============================================================= change id
+    centerText(`ID: ${report.id}`, 20);            
     doc.setFontSize(14);
-    centerText(`Title: ${report.title}`, 30);      //============================================================= change title
+    centerText(`Title: ${report.title}`, 30);     
     doc.setFontSize(12);
     const descriptionLines = doc.splitTextToSize(`Description: ${report.description}`, pageWidth - 20);
     doc.text(descriptionLines, pageWidth / 2, 40, { align: 'center', maxWidth: pageWidth - 20 });
     const lastY = 40 + (descriptionLines.length * 5);
-    centerText(`Price: $${report.price}`, lastY + 10);      //===================================================== change price
+    centerText(`Price: $${report.price}`, lastY + 10);    
     try {
-      const imgData = await this.getBase64Image(report.image);     //============================================== change image
+      const imgData = await this.getBase64Image(report.image);     
       const imgWidth = 50;
       const imgHeight = 50;
       const imgX = (pageWidth - imgWidth) / 2;
@@ -58,7 +58,7 @@ export class ReportViewComponent implements OnInit {
       console.error('Error loading image:', error);
       centerText('Image not available', lastY + 20);     
     }
-    doc.save(`product-details-${report.id}.pdf`);           //===================================================== change pdf name
+    doc.save(`product-details-${report.id}.pdf`);         
   }
 
   private getBase64Image(url: string): Promise<string> {

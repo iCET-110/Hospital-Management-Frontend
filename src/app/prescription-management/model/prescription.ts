@@ -9,4 +9,3 @@ export class Prescription {
         this.prescriptionPath=prescriptionPath;
     }
 }
-    

@@ -1,8 +1,10 @@
+import { Component } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { Medication } from '../../../model/medication';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-confirmation-popup',
