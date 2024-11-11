@@ -5,6 +5,7 @@ import { HoldPatientService } from '../../service/hold-patient-service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-hold-patient',
   standalone: true,
@@ -71,4 +72,3 @@ export class HoldPatientComponent {
   }
 }
 
-  

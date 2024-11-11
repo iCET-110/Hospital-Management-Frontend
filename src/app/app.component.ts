@@ -5,11 +5,12 @@ import { AppointmentHandlingComponent } from "./appointment-handling/appointment
 import { MedicalRecordsHandlingComponent } from "./medical-records-handling/medical-records-handling.component";
 import { PatientManagementComponent } from "./patient-management/patient-management.component";
 import { PrescriptionManagementComponent } from "./prescription-management/prescription-management.component";
+import { PatientInfoComponent } from "./prescription-management/component/patient-info/patient-info.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
+  imports: [RouterOutlet, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, PatientInfoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
