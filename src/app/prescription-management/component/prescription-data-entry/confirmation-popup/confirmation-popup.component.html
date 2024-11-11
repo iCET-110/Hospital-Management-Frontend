@@ -1,1 +1,45 @@
-<p>confirmation-popup works!</p>
+<div class="container">
+    <div class="row">
+        <form>
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title" class="text-success">Proceed the prescription?</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body" style="width:100%;overflow:auto; max-height:400px;">
+                            <table class="table table-success table-striped-columns table-hover">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th scope="col" class="text-success">Drug</th>
+                                        <th scope="col" class="text-success">Dosage</th>
+                                        <th scope="col" class="text-success">Frequency</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-center" *ngFor="let prescriptionDetails of drugData;">
+                                        <td>{{prescriptionDetails.drug}}</td>
+                                        <td>{{prescriptionDetails.dosage}}</td>
+                                        <td>{{prescriptionDetails.frequency}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Confirm</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
