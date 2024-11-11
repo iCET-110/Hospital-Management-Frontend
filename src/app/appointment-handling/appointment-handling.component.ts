@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AppointmentSearchComponent } from "./appointment-search/appointment-search.component";
+import { AppointmentUpdateComponent } from "./appointment-update/appointment-update.component";
+import { NavBarComponent } from "../common/nav-bar/nav-bar.component";
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { DeleteAppointmentComponent } from "./delete-appointment/delete-appointment.component";
 import { AddAppointmentComponent } from './alerts/add-appointment/add-appointment.component';
@@ -11,7 +13,7 @@ import { UpdateSuccessMessageComponent } from './alerts/update-appointment/updat
 @Component({
   selector: 'app-appointment-handling',
   standalone: true,
-  imports: [AppointmentSearchComponent,AddCategoryComponent,AddAppointmentComponent,DeleteAppointmentComponent,SuccessMessageComponent,ConfirmationAlertComponent,UpdateConfirmationAlertComponent,UpdateSuccessMessageComponent],
+  imports: [AddAppointmentComponent,AppointmentUpdateComponent, NavBarComponent,AppointmentSearchComponent,AddCategoryComponent,AddAppointmentComponent,DeleteAppointmentComponent,SuccessMessageComponent,ConfirmationAlertComponent,UpdateConfirmationAlertComponent,UpdateSuccessMessageComponent],
   templateUrl: './appointment-handling.component.html',
   styleUrl: './appointment-handling.component.css'
 })
