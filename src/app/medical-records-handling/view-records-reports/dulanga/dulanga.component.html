@@ -1,66 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Records</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dulanga.component.css">
-</head>
-<body>
-    <div>
-        <h3>View Records</h3>
-        <div class="filter-box">
-            <h6>Filter By Record ID</h6>
-            <input type="text" id="record-id" placeholder="Enter Record ID">
-            <br> <br>
-            <h6>Filter By Record ID</h6>
-            <input type="date" id="date">
-            <br><br>
+<div class="body-class">
+    <h3>VIEW RECORDS</h3>
+    <div class="filter-box">
+        <h6>Filter By Record ID</h6>
+        <input type="text" id="record-id" placeholder="Enter Record ID">
+        <br> <br>
+        <h6>Filter By Date</h6>
+        <input type="date" id="date">
+        <br><br>
 
-            <button class="apply-filters">Apply Filters</button>
-            <button class="clear-filter">Clear Filters</button>
-        </div>
-        
-        <!-- Records Section -->
-        <div class="records-box">
-            <div class="record">
-                <span class="record-id">R001</span>
-                <span class="record-date">19/10/2024</span>
-                <span class="record-time">6:30 AM</span>
-                <button class="view-btn">View</button>
-                <button class="update-btn">Update</button>
-                <button class="delete-btn">Delete</button>
-            </div>
+        <button class="apply-filters">Apply Filters</button>
+        <button class="clear-filter">Clear Filters</button>
+    </div>
 
-            <div class="record">
-                <span class="record-id">R002</span>
-                <span class="record-date">19/10/2024</span>
-                <span class="record-time">6:30 AM</span>
-                <button class="view-btn">View</button>
+    <!-- Records Section -->
+    <div class="records-box">
+        <div class="scrollable-container">
+            <div class="record" *ngFor="let record of records">
+                <span class="record-id">{{ record.id }}</span>
+                <span class="record-date">{{ record.date }}</span>
+                <span class="record-time">{{ record.time }}</span>
+                <button (click)="openModal(record)" class="view-btn">View</button>
                 <button class="update-btn">Update</button>
                 <button class="delete-btn">Delete</button>
             </div>
-
-            <div class="record">
-                <span class="record-id">R002</span>
-                <span class="record-date">19/10/2024</span>
-                <span class="record-time">6:30 AM</span>
-                <button class="view-btn">View</button>
-                <button class="update-btn">Update</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-            
-            <div class="record">
-                <span class="record-id">R002</span>
-                <span class="record-date">19/10/2024</span>
-                <span class="record-time">6:30 AM</span>
-                <button class="view-btn">View</button>
-                <button class="update-btn">Update</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-            
         </div>
     </div>
-</body>
-</html>
+
+    <!-- POP-UP Window -->
+
+    <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+        <div class="modal-dialog modal-dialog-scrollable" (click)="$event.stopPropagation()">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Record Details</h4>
+              <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+            </div>
+            <div class="modal-body">
+              <p><strong>Record ID:</strong> {{ selectedRecord?.id }}</p>
+              <p><strong>Date:</strong> {{ selectedRecord?.date }}</p>
+              <p><strong>Time:</strong> {{ selectedRecord?.time }}</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="update-btn">Update</button>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -106,12 +106,6 @@ h6{
     width: 900px;
 }
 
-.scrollable-container {
-    max-height: 350px;
-    overflow-y: auto;
-    padding-right: 2px; 
-  }
-
 .record {
     display: flex;
     justify-content: space-between;
@@ -197,7 +191,16 @@ button {
     justify-content: space-between;
     align-items: center;
   }
-   
+  
+ 
+  .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+ 
   .modal-body {
     padding: 16px;
     font-size: 0.9em;
@@ -210,12 +213,7 @@ button {
     border-top: 1px solid #e0e0e0;
     display: flex;
     justify-content: flex-end;
-    margin-top: 400px;
-  }
-
-  .modal-title{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight:bolder;
+    margin-top: 300px;
   }
   
   .btn {
@@ -226,7 +224,7 @@ button {
   }
   
   .btn-secondary {
-    background-color: #aa0202; 
+    background-color: #6c757d; 
     color: white;
   }
   
@@ -304,7 +302,6 @@ button {
 
     button {
         width: 100%;
-        margin: 5px 0;
+        margin: 5px 0;
     }
 }
-    
