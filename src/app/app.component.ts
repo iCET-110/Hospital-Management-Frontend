@@ -7,6 +7,11 @@ import { SaradaComponent } from "./medical-records-handling/view-records-reports
 import { DevindaComponent } from "./medical-records-handling/view-reports/devinda/devinda.component";
 import { ViewReportsComponent } from "./medical-records-handling/view-reports/view-reports.component";
 
+import { AppointmentHandlingComponent } from "./appointment-handling/appointment-handling.component";
+import { MedicalRecordsHandlingComponent } from "./medical-records-handling/medical-records-handling.component";
+import { PatientManagementComponent } from "./patient-management/patient-management.component";
+import { PrescriptionManagementComponent } from "./prescription-management/prescription-management.component";
+import { AddRecordsComponent } from "./medical-records-handling/add-records/add-records.component";
 
 @Component({
   selector: 'app-root',
