@@ -24,6 +24,10 @@ export const routes: Routes = [
             {
                 path:"add-patient",
                 component:AddComponent
+            },
+            {
+                path:"update-patient",
+                component:UpdateComponent
             }
         ]
     },
