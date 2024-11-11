@@ -52,10 +52,7 @@ export class HoldPatientComponent {
     }
   ];
 
-  patient: HoldPrescription;
-
   constructor(private HoldPatientService: HoldPatientService) {
-    // Initialize the patient object with sample data and an empty medication list
     this.patient = new HoldPrescription(1, 'John Doe', 101, [
       new Medication('Aspirin', '100mg', 'Once a day'),
       new Medication('Ibuprofen', '200mg', 'Twice a day')
@@ -73,3 +70,5 @@ export class HoldPatientComponent {
     );
   }
 }
+
+  
