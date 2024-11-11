@@ -1,4 +1,5 @@
 export class Medication {
+
     drug:string;
     dosage:string;
     frequency:string;
