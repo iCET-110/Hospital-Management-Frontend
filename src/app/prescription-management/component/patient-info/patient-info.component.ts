@@ -10,7 +10,6 @@ import { AppointmentHandlingComponent } from "../../../appointment-handling/appo
   styleUrl: './patient-info.component.css'
 })
 export class PatientInfoComponent {
- 
     patient = {
       id: '#P024',
       name: 'Ruwan Perera',
@@ -27,8 +26,9 @@ export class PatientInfoComponent {
       appointments: 12,
       bloodGroup: 'A+'
     };
-  }
+}
   
 
   
+
 
