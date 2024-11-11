@@ -12,6 +12,7 @@ import { AddAppointmentComponent } from './appointment-handling/add-appointment/
 import { DeleteAppointmentComponent } from './appointment-handling/delete-appointment/delete-appointment.component';
 import { AppointmentViewComponent } from './appointment-handling/appointment-view/appointment-view.component';
 import { AppoimentSearchComponent } from './appointment-handling/appoiment-search/appoiment-search.component';
+import { PrescriptionManagementComponent } from './prescription-management/prescription-management.component';
 
 export const routes: Routes = [
     {
@@ -49,6 +50,10 @@ export const routes: Routes = [
             {
                 path:"search-appointment",
                 component:AppoimentSearchComponent
+            },
+            {
+                path:"prescription-management",
+                component:PrescriptionManagementComponent
             }
         ]
     },
