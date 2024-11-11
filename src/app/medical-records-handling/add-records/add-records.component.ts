@@ -23,8 +23,8 @@ export class SharedService {
   private functionSource = new Subject<void>();
   function$ = this.functionSource.asObservable();
 
-  callFunction(report: any) {
-    this.functionSource.next(report);
+  callFunction(document:any) {
+    this.functionSource.next(document);
   }
 }
 

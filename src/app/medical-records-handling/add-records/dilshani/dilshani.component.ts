@@ -11,14 +11,25 @@ import { SharedService } from '../add-records.component';
 export class DilshaniComponent implements OnInit{
   public reportList:any = [];
   public reportNames:string = "";
+  public prescriptionList:any = [];
+  public prescriptionNames:string = "";
+    
   constructor(private sharedService: SharedService) {}
   
   ngOnInit(): void {
-    this.sharedService.function$.subscribe((report) => this.addReportToRecord(report))
+    //Subcribed to shared service function to retrive data
+    this.sharedService.function$.subscribe((document) => this.updateReportsPrecription(document));
   }
 
-  addReportToRecord(report:any) {
-    this.reportList.push(report);
-    this.reportNames += (report.name + '\n');    
+  updateReportsPrecription(document:any){
+    if (document.type == "report") {
+      //Update report list with new report
+      this.reportList.push(document.doc);
+      this.reportNames += (document.doc.name + '\n');  
+    } else {
+      //Update prescription list with new report
+      this.prescriptionList.push(document.doc);
+      this.prescriptionNames += (document.doc.name + '\n');  
+    }
   }
 }
