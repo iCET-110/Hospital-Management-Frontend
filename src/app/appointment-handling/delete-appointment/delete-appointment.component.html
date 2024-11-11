@@ -59,8 +59,10 @@
             </div>
             <div class="col-md-6">
               <div class="input-group">
-                <input type="date" class="form-control date-picker" [(ngModel)]="selectedAppointment.date">
-                <input type="time" class="form-control time-picker" [(ngModel)]="selectedAppointment.time">
+                <input type="date" class="form-control date-picker" [(ngModel)]="selectedAppointment.date" 
+                  aria-label="Appointment Date">
+                <input type="time" class="form-control time-picker" [(ngModel)]="selectedAppointment.time"
+                  aria-label="Appointment Time">
               </div>
             </div>
             <div class="col-md-12">
@@ -68,7 +70,7 @@
                 [(ngModel)]="selectedAppointment.description"></textarea>
             </div>
             <div class="col-md-6">
-              <select class="form-select" [(ngModel)]="selectedAppointment.category">
+              <select class="form-select" [(ngModel)]="selectedAppointment.category" aria-label="Appointment Category">
                 <option selected>Select Category</option>
                 <option value="General">General</option>
                 <option value="Surgery">Surgery</option>

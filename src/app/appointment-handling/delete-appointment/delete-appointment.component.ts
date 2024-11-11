@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-delete-appointment',
   standalone: true,
-  imports: [CommonModule, NavBarComponent, FormsModule],
+  imports: [NavBarComponent, FormsModule,CommonModule],
   templateUrl: './delete-appointment.component.html',
   styleUrls: ['./delete-appointment.component.css']
 })
