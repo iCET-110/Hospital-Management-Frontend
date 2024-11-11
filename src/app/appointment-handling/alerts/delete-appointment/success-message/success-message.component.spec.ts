@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavBarComponent } from './nav-bar.component';
+import { SuccessMessageComponent } from './success-message.component';
 
-describe('NavBarComponent', () => {
-  let component: NavBarComponent;
-  let fixture: ComponentFixture<NavBarComponent>;
+describe('SuccessMessageComponent', () => {
+  let component: SuccessMessageComponent;
+  let fixture: ComponentFixture<SuccessMessageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavBarComponent]
+      imports: [SuccessMessageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NavBarComponent);
+    fixture = TestBed.createComponent(SuccessMessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

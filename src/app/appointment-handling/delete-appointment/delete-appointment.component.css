@@ -1,0 +1,195 @@
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.side-bar{
+  z-index: 2;
+  background-color: #E6FFE8;
+}
+
+.bg-light-green {
+  background-color: #E6FFE8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin-left: auto;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.bg-light-green {
+  background-color: #E6FFE8;
+  flex-grow: 1;
+  padding: 0;
+  margin-left: auto;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100;
+}
+
+.bg-light-green {
+  background-color: #E6FFE8;
+  flex-grow: 1;
+  padding: 0;
+  margin-left: auto;
+}
+.admin-info {
+  display: flex;
+  
+  
+}
+
+#admin-info {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 25%;
+}
+
+#top-bar {
+  background-color: #E6FFE8;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+}
+
+button.btn-lg {
+  padding: 0.75rem 2rem;
+}
+
+input[type="text"], input[type="email"], textarea, select, .form-control {
+  background-color: #E6FFE8;
+  border: 1px solid #E6FFE8;
+  width: 100%;
+  min-height: 50px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #38823E;
+}
+
+.btn-check:checked + .btn {
+  background-color: #38823E;
+  color: white;
+}
+
+.btn-outline-success {
+  background-color: #E6FFE8;
+  width: 150px;
+  font-weight: bold;
+  color: #38823E;
+}
+
+#search{
+  max-width: 30%;
+  border-radius: 20px;
+  height: 45px;
+}
+
+.input-group-text {
+  background-color: #E6FFE8;
+  border: none;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group .form-control {
+  border-left: 0;
+  margin-bottom: 10px;
+}
+
+.input-group, .row {
+  width: 100%;
+}
+
+.form-control{
+  min-height: 50px;
+}
+
+.delete-button{
+  max-width: 20%;
+  background-color: #38823E;
+  color: white;
+  border-radius: 30px;
+}
+
+.head-text{
+  color: #38823E;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  text-decoration: underline #38823E;
+}
+
+#form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 2%;
+  height: 80vh;
+}
+
+#image{
+  aspect-ratio: 1/1;
+  background-image: url(../assests/profile.jpg);
+  image-resolution: 10px;
+  background-size: cover; 
+  background-position: center;
+}
+
+.frame{
+  min-width: 100%;
+}
+
+.date-picker, .time-picker {
+  border-radius: 10px !important;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+  #form {
+    width: 100%;
+    margin: 2% auto;
+  }
+
+  .btn-outline-success {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-6 {
+    width: 100%;
+  }
+}

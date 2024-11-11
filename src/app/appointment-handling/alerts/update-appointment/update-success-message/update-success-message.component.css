@@ -1,0 +1,54 @@
+*.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background to focus on the popup */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal {
+    background-color: #e6ffe8; /* Light green background for the success message */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+  }
+  
+  .alert-icon {
+    font-size: 48px;
+    color: green;
+    margin-bottom: 20px;
+  }
+  
+  .alert-content h2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .alert-button {
+    margin-top: 20px;
+  }
+  
+  .alert-button button {
+    background-color: #82e682; /* Light green background for the button */
+    color: black;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px; /* Rounded button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .alert-button button:hover {
+    background-color: #66cc66; /* Slightly darker green on hover */
+  }
+  
