@@ -5,12 +5,13 @@ body {
 .add-records {
     position: absolute;
     left: 60%;
-    top: 0%;
+    top: 17%;
+    left: 56%;
     width: 40%;
-    background-color: #ffffff;
+    background-color: #80cd84;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 h2 {
     color: #333;
@@ -67,4 +68,34 @@ h2 {
 }
 .patient-info strong {
     font-weight: 600;
+}
+.add-reports-container {
+    display: inline-block;
+    position: relative; 
+  }
+  #btnAddReports {
+    cursor: pointer;
+  }
+  #btnPrescriptions{
+    cursor: pointer;
+  }
+  .popup {
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: -35px; 
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  .add-reports-container:hover .popup {
+    visibility: visible;
+    opacity: 1;
 }

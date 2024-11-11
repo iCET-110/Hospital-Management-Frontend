@@ -1,0 +1,23 @@
+<div class="col-md-6">
+    <div class="patient-report">
+        <h2>Patient Report Details</h2>
+        <div class="date-picker-container">
+            <input (change)="searchReportsByDate($event)" type="date" id="reportDate" name="reportDate" class="form-control mb-3" autocomplete="off">
+        </div>
+        <div class="report-section">
+            <h3>Reports</h3>
+            <div class="checkbox-container" *ngFor="let report of displayReportList">
+                <label>{{report.name}}</label>
+                <input type="checkbox" (change)="addReport(report)" class="report-item" data-type="report" data-content="Blood Test: Hemoglobin 14.2 g/dL, WBC 7.5 x10^9/L, Platelets 250 x10^9/L" autocomplete="off">
+            </div>
+            
+        </div>
+        <div class="report-section">
+            <h3>Prescriptions</h3>
+            <div class="checkbox-container" *ngFor="let prescription of displayPrescriptionList">
+                <label>{{prescription.name}}</label>
+                <input type="checkbox" (change)="addPrescription(prescription)" class="report-item" data-type="prescription" data-content="Amlodipine 5mg, once daily for hypertension" autocomplete="off">
+            </div>
+        </div>
+    </div>
+</div>

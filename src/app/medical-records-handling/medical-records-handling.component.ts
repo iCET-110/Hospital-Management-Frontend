@@ -6,8 +6,10 @@ import { MainDashboardComponent } from "./main-dashboard/main-dashboard.componen
   standalone: true,
   imports: [MainDashboardComponent],
   templateUrl: './medical-records-handling.component.html',
-  styleUrl: './medical-records-handling.component.css'
+  styleUrls: ['./medical-records-handling.component.css'],
+  standalone: true
 })
-export class MedicalRecordsHandlingComponent {
 
+export class MedicalRecordsHandlingComponent {
+  
 }
