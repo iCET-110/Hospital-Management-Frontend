@@ -11,9 +11,7 @@ import { ViewPatientListComponent } from './patient-management/view-patient-list
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ViewPatientListComponent,RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
-  imports: [RouterOutlet,SearchComponent],
-  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent],
+  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, SearchComponent, ViewPatientListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
