@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';
+import { SearchComponent } from "../search/search.component";
 
 interface Patient {
   name: string;
@@ -16,7 +17,7 @@ interface Patient {
 @Component({
   selector: 'app-view-patient-list',
   standalone: true,
-  imports: [CommonModule, NavBarComponent],
+  imports: [CommonModule, NavBarComponent, SearchComponent],
   templateUrl: './view-patient-list.component.html',
   styleUrls: ['./view-patient-list.component.css']
 })

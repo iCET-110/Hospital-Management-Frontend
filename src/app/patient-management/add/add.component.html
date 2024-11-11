@@ -1,11 +1,11 @@
-<body id="add-body">
+<div id="add-body">
 <div class="container">
     <div class="header">
       <h1>Add Patient</h1>
       <button class="add-btn" (click)="onSubmit()">Add</button>
     </div>
   
-    <form [formGroup]="patientForm">
+    <div [formGroup]="patientForm">
       <!-- sachin sp Personal Info Section -->
       <div class="form-section">
         <h2>Personal Info</h2>
@@ -122,6 +122,6 @@
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
-</body>
+</div>

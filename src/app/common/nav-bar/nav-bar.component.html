@@ -1,6 +1,6 @@
-<div id="sidebar" class="d-flex flex-column flex-shrink-0 ">
-    <div id="sidebar" class="d-flex flex-column p-3" style="width: 280px;">
-        <!-- <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+<div id="sidebar" class="flex-shrink-0 d-flex flex-column ">
+    <div id="sidebar" class="p-3 d-flex flex-column" style="width: 280px;">
+        <!-- <a href="/" class="mb-3 d-flex align-items-center mb-md-0 me-md-auto link-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32">
                 <use xlink:href="#bootstrap" />
             </svg>
@@ -10,7 +10,7 @@
             Medix
         </div>
         <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
+        <ul class="mb-auto nav nav-pills flex-column">
             <li class="nav-item">
                 <a href="#" class="nav-link link-light" aria-current="page">
                     <svg class="bi me-2" width="16" height="16">
@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li>
-                <a href="#items-submenu-pat" class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
+                <a href="#items-submenu-pat" class="rounded nav-link link-light btn btn-toggle align-items-center collapsed"
                    data-bs-toggle="collapse" aria-expanded="false" id="nav-patients">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table" />
@@ -30,25 +30,22 @@
                     <hr class="dropdown-divider">
                 </a>
                 
-                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-pat">
+                <ul class="pb-1 collapse btn-toggle-nav list-unstyled fw-normal small" id="items-submenu-pat">
                     <li class="nav-item" id="liViewPatient">
-                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>View patient</a>
+                        <a routerLink="view-patient" class="nav-link link-dark"><span class="separator">|</span>View patient</a>
                     </li>
                     <li class="nav-item" id="liAddPatient">
-                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>Add patient</a>
-                    </li>
-                    <li class="nav-item" id="liUpdatePatient">
-                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>Update patient</a>
+                        <a routerLink="add-patient" class="nav-link link-dark"><span class="separator">|</span>Add patient</a>
                     </li>
                     <li class="nav-item" id="liDeletePatient">
-                        <a href="#" class="nav-link link-dark"><span class="separator">|</span>Delete patient</a>
+                        <a routerLink="search-patient" class="nav-link link-dark"><span class="separator">|</span>Search patient</a>
                     </li>
                 </ul>
             
             </li>
             
             <li>
-                <a href="#items-submenu-apo" class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
+                <a href="#items-submenu-apo" class="rounded nav-link link-light btn btn-toggle align-items-center collapsed"
                     data-bs-toggle="collapse" aria-expanded="false" id="nav-appointments">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table" />
@@ -56,7 +53,7 @@
                     <i class="bi bi-file-earmark-post me-2"></i>Appointments
                     <hr class="dropdown-divider">
                 </a>
-                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-apo">
+                <ul class="pb-1 collapse btn-toggle-nav list-unstyled fw-normal small" id="items-submenu-apo">
                     <li class="nav-item" id="liViewAppointment">
                         <a href="#" class="nav-link link-dark"><span class="separator">|</span>View appointments</a>
                     </li>
@@ -94,7 +91,7 @@
 
             <li>
                 <a href="#items-submenu-category"
-                    class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
+                    class="rounded nav-link link-light btn btn-toggle align-items-center collapsed"
                     data-bs-toggle="collapse" aria-expanded="false" id="nav-category">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table" />
@@ -102,7 +99,7 @@
                     <i class="bi bi-bookmarks-fill me-2"></i>Category
                     <hr class="dropdown-divider">
                 </a>
-                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-category">
+                <ul class="pb-1 collapse btn-toggle-nav list-unstyled fw-normal small" id="items-submenu-category">
                     <li class="nav-item" id="liViewCategory">
                         <a href="#" class="nav-link link-dark"><span class="separator">|</span>View category</a>
                     </li>
@@ -120,7 +117,7 @@
             </li>
             <li>
                 <a href="#items-submenu-reports"
-                    class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
+                    class="rounded nav-link link-light btn btn-toggle align-items-center collapsed"
                     data-bs-toggle="collapse" aria-expanded="false" id="nav-reports">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table" />
@@ -128,7 +125,7 @@
                     <i class="bi bi-file-bar-graph-fill me-2"></i>Reports
                     <hr class="dropdown-divider">
                 </a>
-                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-reports">
+                <ul class="pb-1 collapse btn-toggle-nav list-unstyled fw-normal small" id="items-submenu-reports">
                     <li class="nav-item" id="liViewCategory">
                         <a href="#" class="nav-link link-dark"><span class="separator">|</span>View reports</a>
                     </li>
@@ -142,7 +139,7 @@
             </li>
             <li>
                 <a href="#items-submenu-records"
-                    class="nav-link link-light btn btn-toggle align-items-center rounded collapsed"
+                    class="rounded nav-link link-light btn btn-toggle align-items-center collapsed"
                     data-bs-toggle="collapse" aria-expanded="false" id="nav-records">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table" />
@@ -150,7 +147,7 @@
                     <i class="bi bi-folder-fill me-2"></i>Records
                     <hr class="dropdown-divider">
                 </a>
-                <ul class="collapse btn-toggle-nav list-unstyled fw-normal pb-1 small" id="items-submenu-records">
+                <ul class="pb-1 collapse btn-toggle-nav list-unstyled fw-normal small" id="items-submenu-records">
                     <li class="nav-item" id="liViewCategory">
                         <a href="#" class="nav-link link-dark"><span class="separator">|</span>View records</a>
                     </li>
