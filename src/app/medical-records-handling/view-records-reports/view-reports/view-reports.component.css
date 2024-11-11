@@ -1,0 +1,119 @@
+body {
+    background-color: #e0f8e0;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body-class {
+    margin-top: 10px;
+    background-color: #E6FFE8;
+    padding: 20px;
+    margin-left: 100px;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Filter Box Styling */
+.filter-box {
+    background-color: #80CD84;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    width: 900px;
+    max-width: 100%;
+}
+
+.filter-box input,
+.filter-box label {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #80CD84;
+    border-radius: 50px;
+}
+
+.apply-filters {
+    background-color: #1f7d1f;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.clear-filter {
+    background-color: #ad3030;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.clear-filter:hover {
+    background-color: #700000;
+}
+
+.apply-filters:hover {
+    background-color: #003400;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .body-class {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .filter-box {
+        padding: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .apply-filters,
+    .clear-filter {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-box {
+        padding: 15px;
+    } 
+
+    h3 {
+        font-size: 1.2em;
+        margin-right: 0;
+    }
+}
