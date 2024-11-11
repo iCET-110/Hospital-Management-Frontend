@@ -1,0 +1,86 @@
+<div class="col bg-light-green d-flex flex-column">
+  <div class="d-flex justify-content-between p-4 align-items-center" id="top-bar">
+    <h1 id="head-text">Delete Appointments</h1>
+    <div class="d-flex align-items-center" id="admin-info">
+      <div class="me-3" id="date">
+        <strong>Date</strong>
+        <div>10/18/2024</div>
+      </div>
+      <div class="d-flex align-items-center" id="admin-content">
+        <img alt="admin" id="image" class="rounded-circle">
+        <div class="ms-2" id="admin-name">
+          <strong>Nisila Perera</strong>
+          <div>Admin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame2 container-fluid flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="frame form-container row justify-content-center w-100 h-100">
+      <div class="col-lg-10 col-md-12 col-12 bg-white p-4 p-md-5 rounded" id="form">
+        <div class="input-group">
+          <input type="search" [(ngModel)]="searchQuery" (input)="onSearchInput()" class="form-control"
+            placeholder="Search" id="search">
+        </div>
+        <hr>
+
+        <div class="row g-3">
+          <div class="col-md-3">
+            <h3 *ngIf="!selectedAppointment.name && searchQuery">No appointment found for "{{ searchQuery }}"</h3>
+            <h3 *ngIf="selectedAppointment.appointmentId">Appointment ID: {{ selectedAppointment.appointmentId }}</h3>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Enter Name" [(ngModel)]="selectedAppointment.name">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="NIC" [(ngModel)]="selectedAppointment.NIC">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Mobile Number"
+                [(ngModel)]="selectedAppointment.mobileNumber">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Email Address"
+                [(ngModel)]="selectedAppointment.emailAddress">
+            </div>
+            <div class="col-md-6">
+              <div class="btn-group" role="group" aria-label="Gender selection">
+                <input type="radio" class="btn-check" name="gender" id="male" value="male"
+                  [(ngModel)]="selectedAppointment.gender" autocomplete="off">
+                <label class="btn btn-outline-success" for="male">Male</label>
+
+                <input type="radio" class="btn-check" name="gender" id="female" value="female"
+                  [(ngModel)]="selectedAppointment.gender" autocomplete="off">
+                <label class="btn btn-outline-success" for="female">Female</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="date" class="form-control date-picker" [(ngModel)]="selectedAppointment.date">
+                <input type="time" class="form-control time-picker" [(ngModel)]="selectedAppointment.time">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control" placeholder="Description"
+                [(ngModel)]="selectedAppointment.description"></textarea>
+            </div>
+            <div class="col-md-6">
+              <select class="form-select" [(ngModel)]="selectedAppointment.category">
+                <option selected>Select Category</option>
+                <option value="General">General</option>
+                <option value="Surgery">Surgery</option>
+                <option value="Consultation">Consultation</option>
+              </select>
+            </div>
+            <div class="col-12 text-end mt-4">
+              <button class="delete-button btn btn-lg w-100" (click)="delete()">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
