@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DeleteAppointmentComponent } from "./delete-appointment/delete-appointment.component";
 import { AddAppointmentComponent } from './alerts/add-appointment/add-appointment.component';
 import { ConfirmationAlertComponent } from './alerts/delete-appointment/confirmation-alert/confirmation-alert.component';
 import { SuccessMessageComponent } from './alerts/delete-appointment/success-message/success-message.component';
@@ -8,7 +9,7 @@ import { UpdateSuccessMessageComponent } from './alerts/update-appointment/updat
 @Component({
   selector: 'app-appointment-handling',
   standalone: true,
-  imports: [AddAppointmentComponent,SuccessMessageComponent,ConfirmationAlertComponent,UpdateConfirmationAlertComponent,UpdateSuccessMessageComponent],
+  imports: [AddAppointmentComponent,DeleteAppointmentComponent,SuccessMessageComponent,ConfirmationAlertComponent,UpdateConfirmationAlertComponent,UpdateSuccessMessageComponent],
   templateUrl: './appointment-handling.component.html',
   styleUrl: './appointment-handling.component.css'
 })
