@@ -1,0 +1,46 @@
+<div class="p-3">
+ 
+  <div class="form-section">
+    <input [(ngModel)]="drugData.DrugName" type="text" id="drug-name" placeholder="Drug Name">
+    <input [(ngModel)]="drugData.Dosage" type="text" id="dosage" placeholder="Dosage">
+    <input [(ngModel)]="drugData.Frequency" type="text" id="frequency" placeholder="Frequency">
+    <button (click)="add()" id="add-drug" class="add-btn">
+      {{ editingIndex !== null ? '✔' : '+' }} 
+    </button>
+  </div>
+
+  <div class="modal-body" style="width:100%;overflow:auto; max-height:200px;">
+    <table class="table table-success table-striped-columns">
+      <thead>
+        <tr class="text-center">
+          <th scope="col" class="text-success">Drug</th>
+          <th scope="col" class="text-success">Dosage</th>
+          <th scope="col" class="text-success">Frequency</th>
+          <th scope="col" class="text-success">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prescriptionDetails of drugsList; let i = index">
+          <td>{{prescriptionDetails.DrugName}}</td>
+          <td>{{prescriptionDetails.Dosage}}</td>
+          <td>{{prescriptionDetails.Frequency}}</td>
+          <td>
+            <button (click)="edit(i)" class="edit-btn">
+              <i class="bi bi-pencil-square"></i> 
+            </button>
+            <button (click)="delete(i)" class="delete-btn">
+              <i class="bi bi-trash3-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="confirm-wrapper">
+    <button type="button" class="confirm-btn" data-bs-toggle="modal" data-bs-target="#myModal">
+      Review
+    </button>
+  </div>
+</div>
+<app-confirmation-popup></app-confirmation-popup>
