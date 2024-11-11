@@ -7,7 +7,7 @@ import { UpdateConfirmationAlertComponent } from './alerts/update-appointment/up
 import { UpdateSuccessMessageComponent } from './alerts/update-appointment/update-success-message/update-success-message.component';
 
 @Component({
-  selector: 'app-appointment-handling',
+  selector: 'app-appoiment-search',
   standalone: true,
   imports: [AddAppointmentComponent,DeleteAppointmentComponent,SuccessMessageComponent,ConfirmationAlertComponent,UpdateConfirmationAlertComponent,UpdateSuccessMessageComponent],
   templateUrl: './appointment-handling.component.html',
