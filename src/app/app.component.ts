@@ -8,10 +8,13 @@ import { ViewPatientListComponent } from './patient-management/view-patient-list
 @Component({
   selector: 'app-root',
   standalone: true,
+
   imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, SearchComponent, ViewPatientListComponent],
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title= 'HMS';
+  title = 'HMS';
 }
+

@@ -1,0 +1,98 @@
+<div class="container col-lg-12 m-0">
+<div class="row aboutArea ms-3">
+    <div class="col-4">
+        <h3>Add Appointment</h3>
+    </div>
+    <div class="col-5 mt-3">
+        <div class="rectangle ms-lg-4 w-50 ">
+            <div class="">
+                <span class="dateTitle">Date</span><br>
+                <span class="date" style="opacity: 0.7;">10/18/2024</span>
+            </div>
+            <div >
+                <img src="Assets/603f0854508fc1d2465d3195dec51e0f.jpeg" alt="" class="profileImg">
+            </div>
+            <div >
+                <span>Nisila Perera</span><br>
+                <span style="opacity: 0.7;">Admin</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row add-appointment-main col-lg-9 mt-5">
+        <p class="pt-2 pb-0">Appointment ID : <span>P00009864</span></p>
+        <hr>
+
+        <div class="d-flex flex-column align-items-center h-100">
+            
+            <div class="row w-100 mt-4">
+                <div class="col-6">
+                    <input class="form-control" type="text" placeholder="Enter Name" aria-label="Enter Name" id="txtName">
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" placeholder="NIC" aria-label="NIC" id="txtId">
+                </div>
+            </div>
+
+            <div class="row w-100 mt-4">
+                <div class="col-6">
+                    <input class="form-control" type="text" placeholder="Mobile Number" aria-label="Mobile Number">
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="email" placeholder="Email Address" aria-label="Email Address">
+                </div>
+            </div>
+
+            <div class="row w-100 mt-4">
+                <!-- Gender buttons -->
+                <div class="btn-group col-4" role="group" aria-label="Gender">
+                    <!-- Male button -->
+                    <button type="button" class="btn"
+                            [ngClass]="{'active-btn': isMaleSelected(), 'inactive-btn': !isMaleSelected()}"
+                            (click)="selectGender('male')">Male</button>
+                  
+                    <!-- Female button -->
+                    <button type="button" class="btn"
+                            [ngClass]="{'active-btn': isFemaleSelected(), 'inactive-btn': !isFemaleSelected()}"
+                            (click)="selectGender('female')">Female</button>
+                  </div>
+                  
+                
+
+                <!-- Date and Time inputs -->
+                <div class="col-4">
+                    <input class="form-control" type="date" 
+                           aria-label="Appointment date"
+                           placeholder="Select date"
+                           value="2024-10-12">
+                </div>
+                <div class="col-4">
+                    <input class="form-control" type="time" value="10:00" 
+                           aria-label="Appointment time" 
+                           placeholder="Select time">
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-floating mt-4 p-2 w-100">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea" class="m-2">Description</label>
+            </div>
+
+            <div class="row w-100 mt-4">
+                <div class="col-6">
+                    <select class="form-select" aria-label="Select appointment category">
+                        <option selected>Category</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <button type="button" class="btn btn-success btn-add">Add Appointment</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
