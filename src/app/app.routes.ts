@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { UpdateComponent } from './patient-management/update/update.component';
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 import { DashBordPageComponent } from './dash-bord-page/dash-bord-page.component';
 import { ViewPatientListComponent } from './patient-management/view-patient-list/view-patient-list.component';
