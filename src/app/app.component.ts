@@ -17,3 +17,4 @@ import { AddRecordsComponent } from "./medical-records-handling/add-records/add-
 export class AppComponent {
   title = 'HMS';
 }
+
