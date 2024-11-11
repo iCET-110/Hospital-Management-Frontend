@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
-import { SachiniComponent } from "./medical-records-handling/view-records-reports/sachini/sachini.component";
 import { DulangaComponent } from "./medical-records-handling/view-records-reports/dulanga/dulanga.component";
+import { ViewReportsComponent } from './medical-records-handling/view-records-reports/view-reports/view-reports.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, SachiniComponent, DulangaComponent],
+  imports: [RouterOutlet, NavBarComponent, DulangaComponent,ViewReportsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

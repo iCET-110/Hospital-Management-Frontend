@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SachiniComponent } from './sachini.component';
+import { ViewReportsComponent } from './view-reports.component';
 
-describe('SachiniComponent', () => {
-  let component: SachiniComponent;
-  let fixture: ComponentFixture<SachiniComponent>;
+describe('ViewReportsComponent', () => {
+  let component: ViewReportsComponent;
+  let fixture: ComponentFixture<ViewReportsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SachiniComponent]
+      imports: [ViewReportsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SachiniComponent);
+    fixture = TestBed.createComponent(ViewReportsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

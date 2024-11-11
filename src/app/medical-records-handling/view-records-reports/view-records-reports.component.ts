@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { SachiniComponent } from './sachini/sachini.component';
 import { DulangaComponent } from './dulanga/dulanga.component';
+import { ViewReportsComponent } from './view-reports/view-reports.component';
 
 @Component({
   selector: 'app-view-records-reports',
   standalone: true,
-  imports: [SachiniComponent, DulangaComponent],
+  imports: [DulangaComponent,ViewReportsComponent],
   templateUrl: './view-records-reports.component.html',
   styleUrl: './view-records-reports.component.css'
 })
