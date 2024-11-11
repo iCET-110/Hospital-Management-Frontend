@@ -1,0 +1,62 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #80CD84);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.patient-list-container {
+    position: fixed; 
+    top: 0; 
+    left: 25%; 
+    right: 0; 
+    background-color: #CAF4CC;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 1000px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.patient-list-container h1 {
+    color: #0c5e07;
+    font-size: 32px;
+    font-family: 'sans-serif';
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.patient-list-container .table th {
+    background-color: #38823E;
+    font-family: 'sans-serif';
+    font-size: 18px;
+    color: #eeeee6;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.patient-list-container .table-hover tbody tr:hover {
+    background-color: #eeeee6;
+}
+
+.patient-list-container .table td {
+    font-family: 'sans-serif';
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.patient-list-container .table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 100%;
+}
+
+
+
+
+
