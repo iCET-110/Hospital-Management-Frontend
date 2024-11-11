@@ -1,0 +1,82 @@
+<div class="body">
+    <div class="row">
+        <div class="col-12">
+            <div class="row aboutArea">
+                <div class="col-4">
+                    <div>
+                        <h3>Update Appointment</h3>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-6">
+                    <div class="rectangle">
+                        <div class="col-4" style="margin-left: 80px;">
+                            <span class="dateTitle">Date</span><br>
+                            <span class="date" style="opacity: 0.7;">10/18/2024</span>
+                        </div>
+                        <div class="col-3">
+                            <img src="603f0854508fc1d2465d3195dec51e0f.jpeg" alt="" class="profileImg">
+                        </div>
+                        <div class="col-5" style="margin-left: 25px;">
+                            <span>Nisila Perera</span><br>
+                            <span style="opacity: 0.7;">Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fromSection col-12">
+                <div class="row-1 col-12">
+                    <div style="position: relative; display: flex; align-items: center;">
+                        <input [(ngModel)]="searchText" type="text" class="searchBar" placeholder="Search">
+                        <img src="01 align center.svg" alt="" class="searchIcon" (click)="searchPatient()">
+                    </div>
+                </div>
+                <div class="row-2 col-12">
+                    <input type="text" class="apponitmentId" placeholder="Enter Appointment ID">
+                </div>
+                <div class="row-2 col-12" style="display: flex;">
+                    <div class="col-5">
+                        <input type="text" placeholder="Enter Name" class="txtName">
+                    </div>
+                    <div class="col-5">
+                        <input type="text" placeholder="Enter Nic Number" class="txtNic">
+                    </div>
+                </div>
+                <div class="row-2 col-12" style="display: flex;">
+                    <div class="col-5">
+                        <input type="text" placeholder="Enter Mobile Number" class="txtMobile">
+                    </div>
+                    <div class="col-5">
+                        <input type="text" placeholder="Enter Email Address" class="txtEmail">
+                    </div>
+                </div>
+                <div class="row-2 col-12" style="display: flex;">
+                    <div class="col-4 maleFemaleBtn" style="display: flex;">
+                        <label class="switch">
+                            <input type="checkbox" checked="" class="genderChckBox" id="genderToggle">
+                            <span class="label-text">Gender</span>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label for="appointmentDate">Appointment Date</label>
+                        <input type="date" id="appointmentDate" class="aptDate">
+                    </div>
+                    <div class="col-3">
+                        <label for="appointmentTime">Appointment Time</label>
+                        <input type="time" id="appointmentTime" class="aptTime">
+                    </div>
+                </div>
+                <div class="row-2 col-12" style="display: flex;">
+                    <div class="col-5">
+                        <input type="text" placeholder="Enter Description" class="txtDesc">
+                    </div>
+                    <div class="col-5">
+                        <input type="" placeholder="Enter Category" class="txtCategory">
+                    </div>
+                </div>
+                <div class="row-1 col-12">
+                    <button class="btnUpdate" (click)="update()">update</button>
+                </div>
+            </div>
+        </div>
+    </div>

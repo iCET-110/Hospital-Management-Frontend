@@ -1,0 +1,13 @@
+<div class="input-group mb-3 mt-4 w-50">
+    <input
+      type="text"
+      class="form-control rounded-3 p-2"
+      placeholder="Search..."
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+    />
+    <button class="btn btn-outline-secondary" type="button" (click)="clearSearch()">
+      Clear
+    </button>
+  </div>
+  

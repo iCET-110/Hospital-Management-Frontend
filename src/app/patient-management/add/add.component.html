@@ -1,0 +1,127 @@
+<div id="add-body">
+<div class="container">
+    <div class="header">
+      <h1>Add Patient</h1>
+      <button class="add-btn" (click)="onSubmit()">Add</button>
+    </div>
+  
+    <div [formGroup]="patientForm">
+      <!-- sachin sp Personal Info Section -->
+      <div class="form-section">
+        <h2>Personal Info</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="firstName"
+              placeholder="First name"
+              [class.error]="patientForm.get('firstName')?.touched && patientForm.get('firstName')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="lastName"
+              placeholder="Last name"
+              [class.error]="patientForm.get('lastName')?.touched && patientForm.get('lastName')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group gender-group">
+            <label>
+              <input type="radio" name="gender" formControlName="gender" value="male"> male
+            </label>
+            <label>
+              <input type="radio" name="gender" formControlName="gender" value="female"> female
+            </label>
+          </div>
+          
+  
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="nic"
+              placeholder="NIC"
+              [class.error]="patientForm.get('nic')?.touched && patientForm.get('nic')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="date" 
+              formControlName="dateOfBirth"
+              [class.error]="patientForm.get('dateOfBirth')?.touched && patientForm.get('dateOfBirth')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="tel" 
+              formControlName="contact"
+              placeholder="07X XXX XXXX"
+              [class.error]="patientForm.get('contact')?.touched && patientForm.get('contact')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group full-width">
+            <textarea 
+              formControlName="residentAddress"
+              placeholder="Resident address"
+              [class.error]="patientForm.get('residentAddress')?.touched && patientForm.get('residentAddress')?.invalid"
+            ></textarea>
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="guardian"
+              placeholder="Guardian"
+              [class.error]="patientForm.get('guardian')?.touched && patientForm.get('guardian')?.invalid"
+            >
+          </div>
+  
+          <div class="form-group">
+            <input 
+              type="tel" 
+              formControlName="guardianContact"
+              placeholder="Guardian contact"
+              [class.error]="patientForm.get('guardianContact')?.touched && patientForm.get('guardianContact')?.invalid"
+            >
+          </div>
+        </div>
+      </div>
+  
+      <!-- sachin sp Medical Info Section -->
+      <div class="form-section medical-section">
+        <h2>Medical Info & History</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <select 
+              formControlName="bloodType"
+              [class.error]="patientForm.get('bloodType')?.touched && patientForm.get('bloodType')?.invalid"
+            >
+              <option value="">Select blood type</option>
+              <option *ngFor="let type of bloodTypes" [value]="type">{{type}}</option>
+            </select>
+          </div>
+  
+          <div class="form-group full-width">
+            <input 
+              type="text" 
+              formControlName="allergies"
+              placeholder="Allergies"
+            >
+          </div>
+  
+          <div class="form-group full-width">
+            <textarea 
+              formControlName="remarks"
+              placeholder="Remarks"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,8 +3,8 @@
     color: white;
     height: 100vh;
     margin: 0;
-    position: fixed;
-    left: 0;
+    width: 280px;
+    overflow: hidden;
 }
 
 #sidebar a {
@@ -41,6 +41,7 @@
     position: relative;
     text-align: center;
     width: 100%;
+    color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -48,7 +49,7 @@
     display: block;
     width: max-content; 
     margin-right: 0;
-    color: #38823E; 
+    color: #ffffff; 
 }
 #nav-category {
     text-align: left; 
@@ -58,6 +59,7 @@
     position: relative;
     text-align: center;
     width: 100%;
+    color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -65,11 +67,12 @@
     display: block;
     width: max-content; 
     margin-right: 0;
-    color: #38823E; 
+    color: #ffffff; 
 }
 #nav-patients {
     text-align: left; 
 }
+
 
 #items-submenu-pto {
     position: relative;
@@ -135,11 +138,11 @@
     background: linear-gradient(360deg, #80CD84,#BFE6C1, #E6FFE8);
     color: #38823E;
     font-size: xx-large; 
-    width: 106.5%;
+    width: 117%;
     height: 15%;
     text-align: center; 
     padding: 1rem; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.248); 
+    box-shadow: 0 2px 5px rgb(255, 255, 255); 
     border-radius: 5vw 0 0 5vw ;
 }
 #sidebar{
