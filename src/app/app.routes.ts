@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 
 import { UpdateComponent } from './patient-management/update/update.component';

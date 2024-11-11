@@ -5,7 +5,6 @@ import { PrescriptionManagementComponent } from './prescription-management.compo
 describe('PrescriptionManagementComponent', () => {
   let component: PrescriptionManagementComponent;
   let fixture: ComponentFixture<PrescriptionManagementComponent>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [PrescriptionManagementComponent]

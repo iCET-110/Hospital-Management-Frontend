@@ -22,8 +22,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "/*",
+                "input": "src/app/prescription-management/img/delete.png",
+                "output": "img"
               }
             ],
             "styles": [
