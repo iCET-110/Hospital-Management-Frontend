@@ -1,21 +1,20 @@
-import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-
-import { MedicalRecordsHandlingComponent } from "./medical-records-handling/medical-records-handling.component";
-import { PatientManagementComponent } from "./patient-management/patient-management.component";
-import { PrescriptionManagementComponent } from "./prescription-management/prescription-management.component";
-import { AppointmentHandlingComponent } from './appointment-handling/appointment-handling.component';
+import { UpdateComponent } from './patient-management/update/update.component';
+import { SearchComponent } from './patient-management/search/search.component';
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
-import { AddAppointmentComponent } from "./appointment-handling/alerts/add-appointment/add-appointment.component";
+import { Component } from '@angular/core';
 
+import { ViewPatientListComponent } from './patient-management/view-patient-list/view-patient-list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, NavBarComponent, AddAppointmentComponent],
+
+  imports: [RouterOutlet,NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, SearchComponent, ViewPatientListComponent],
+
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'HMS';
 }
+
