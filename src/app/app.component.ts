@@ -10,10 +10,11 @@ import { AddRecordsComponent } from "./medical-records-handling/add-records/add-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, AppointmentHandlingComponent, MedicalRecordsHandlingComponent, PatientManagementComponent, PrescriptionManagementComponent, AddRecordsComponent],
+  imports: [RouterOutlet, NavBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'HMS';
 }
+
