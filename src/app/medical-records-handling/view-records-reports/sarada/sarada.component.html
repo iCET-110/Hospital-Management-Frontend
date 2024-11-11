@@ -2,10 +2,10 @@
         <h3>View Records</h3>
         <div class="filter-box">
             <h6>Filter By Record ID</h6>
-            <input type="text" id="record-id" placeholder="Enter Record ID">
+            <input type="text" [(ngModel)]="recordId" placeholder="Enter Record ID">
             <br> <br>
             <h6>Filter By Record ID</h6>
-            <input type="date" id="date">
+            <input type="date"[(ngModel)]="date">
             <br><br>
 
             <button class="apply-filters"(click)="applyForm()">Apply Filters</button>
